@@ -34,8 +34,8 @@ class Login extends CI_Controller {
 		$this->load->library(array('session'));
 		//$this->load->library('Password');
 	    $this->load->helper(array('url'));
-		$this->load->model('N_model');
-		$this->load->model('Model_Ifv');
+		//$this->load->model('N_model');
+		//$this->load->model('Model_Ifv');
 	}
 
 	public function index(){
