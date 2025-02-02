@@ -34,9 +34,9 @@
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" placeholder="Usuario" type="text" id="usuario" name="usuario">
                   </div>
                 </div>
                 <div class="form-group">
@@ -44,7 +44,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" placeholder="Contraseña" type="password" id="contraseña" name="contraseña">
                   </div>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">

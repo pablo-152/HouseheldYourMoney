@@ -39,8 +39,8 @@ class Login extends CI_Controller {
 	}
 
 	public function index(){
-		//$dato['list_cliente']=$this->N_model->cmb_cliente_sistema();
-		$this->load->view('login/login'/*,$dato*/);
+		//$this->load->view('login/login');
+		$this->load->view('View_HYM/Configuraciones/Modulo-General/index');
 	}
 	
 	public function ingresar(){

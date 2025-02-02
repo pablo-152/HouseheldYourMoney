@@ -3,7 +3,7 @@
 <div class="container">
     <a class="navbar-brand" href="dashboard.html">
     <img src="<?=base_url() ?>template/assets/img/brand/white.png">
-    </a>
+    </a>    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" 
         aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
