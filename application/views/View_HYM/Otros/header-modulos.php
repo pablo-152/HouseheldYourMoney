@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Sales Admin | CORK - Multipurpose Bootstrap Dashboard Template </title>
+    <title>.:HouseheldYourMoney:.</title>
     <link rel="icon" type="image/x-icon" href="<?=base_url() ?>template/assets/img/favicon.ico"/>
     <link href="<?=base_url() ?>template/assets/css/loader.css" rel="stylesheet" type="text/css" />
     <script src="<?=base_url() ?>template/assets/js/loader.js"></script>
@@ -18,12 +18,19 @@
     <link href="<?=base_url() ?>template/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
     <link href="<?=base_url() ?>template/assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link href="<?=base_url() ?>template/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/table/datatable/dt-global_style.css">
+    <link href="<?=base_url() ?>template/assets/css/tables/table-basic.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url() ?>template/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url() ?>template/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
         <!-- BEGIN LOADER -->
-        <div id="load_screen"> <div class="loader"> <div class="loader-content">
-        <div class="spinner-grow align-self-center"></div>
+    <div id="load_screen"> <div class="loader"> <div class="loader-content">
+    <div class="spinner-grow align-self-center"></div>
     </div></div></div>
     <!--  END LOADER -->
 

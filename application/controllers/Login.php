@@ -34,13 +34,14 @@ class Login extends CI_Controller {
 		$this->load->library(array('session'));
 		//$this->load->library('Password');
 	    $this->load->helper(array('url'));
-		//$this->load->model('N_model');
+		$this->load->model('N_model');
 		//$this->load->model('Model_Ifv');
 	}
 
-	public function index(){
-		//$this->load->view('login/login');
-		$this->load->view('View_HYM/Configuraciones/Modulo-General/index');
+	public function index() {
+		$navegacion = $this->N_model->get_navegacion();
+        $data['navegacion'] = $navegacion;
+		$this->load->view('View_HYM/Configuraciones/Modulo-General/index',$data);
 	}
 	
 	public function ingresar(){

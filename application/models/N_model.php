@@ -6,6 +6,32 @@
       $this->load->library('session');  
     }
 
+    public function get_navegacion() {
+      $this->db->select('*');
+      $this->db->order_by('orden_navegacion', 'ASC');
+      $query = $this->db->get('navegacion');
+      //echo $this->db->last_query();
+      return $query->result(); 
+    }
+
+  // Obtener submódulos de un módulo
+  public function get_submodulos()
+{
+    $query = $this->db->get('navegacion'); // O la consulta que estés haciendo
+    if ($query->num_rows() > 0) {
+        return $query->result(); // Devolver los resultados como un array de objetos
+    }
+    return null; // En caso de no haber resultados
+}
+
+  // Obtener subsubmódulos de un submódulo
+  public function get_subsubmodulos($id_padre) {
+      $this->db->select('*');
+      $this->db->where('id_padre_navegacion', $id_padre);  // Obtener subsubmódulos
+      $query = $this->db->get('navegacion');
+      return $query->result();
+  }
+
 
     public function encriptar($dato){
         $sql = "call usp_retorna_cadena_pwd_ED('".$dato['password']."','E')";
