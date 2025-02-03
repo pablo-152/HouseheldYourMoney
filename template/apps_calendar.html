@@ -20,10 +20,13 @@
     <link href="assets/css/forms/theme-checkbox-radio.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL STYLE -->
     <style>
-        .widget-content-area { border-radius: 6px;
-            -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
-            -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
-            box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2); margin-bottom: 10px; }
+        .widget { margin-bottom: 10px; }
+        .widget {
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+}
+.widget-content-area { border-radius: 6px; }
         .daterangepicker.dropdown-menu {
             z-index: 1059;
         }
@@ -213,6 +216,7 @@
                             </div>
                         </div>
                     </div>
+                </li>
                 </li>
 
             </ul>

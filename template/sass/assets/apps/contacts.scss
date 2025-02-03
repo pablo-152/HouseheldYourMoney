@@ -4,7 +4,6 @@
 
 @import '../../base/base';    // Base Variables
 
-
 /*----------Theme checkbox---------*/
 
 .new-control {
@@ -41,8 +40,12 @@
 
   input {
     padding: 6px 27px 6px 15px;
+    color: $m-color_5;
     border: none;
     width: 100% !important;
+    background-color: #fff;
+    border: 1px solid $m-color_3;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
 
     &:focus {
       border-color: $m-color_5;
@@ -74,45 +77,62 @@
   .switch {
     text-align: right;
 
-    .view-grid, .view-list {
+    .view-grid {
       padding: 10px;
-      background: $m-color_12;
+      background: #fff;
       border-radius: 5px;
       cursor: pointer;
-      color: $m-color_6;
-      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+      color: $m-color_9;
       width: 43px;
       height: 41px;
       fill: rgba(0, 23, 55, 0.08);
+      border: 1px solid $m-color_3;
+      box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+    }
+
+    .view-list {
+      padding: 10px;
+      background: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      color: $m-color_9;
+      box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+      width: 43px;
+      height: 41px;
+      fill: rgba(0, 23, 55, 0.08);
+      border: 1px solid $m-color_3;
+      box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
     }
   }
 
   #btn-add-contact {
     padding: 9px;
-    background: $m-color_12;
+    background: #ffffff;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 35px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
     width: 43px;
     height: 41px;
-    color: $m-color_14;
+    color: $primary;
     fill: rgba(27, 85, 226, 0.2392156863);
+    border: 1px solid $m-color_3;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
 
     &:hover {
-      color: $m-color_6;
+      color: $m-color_9;
       fill: rgba(0, 23, 55, 0.08);
     }
   }
 }
 
 .modal-backdrop {
-  background-color: $m-color_9;
+  background-color: $m-color_2;
 }
 
 .searchable-container {
   .modal-content {
     border: none;
+    box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
 
     svg.close {
       position: absolute;
@@ -174,10 +194,10 @@
 
     .btn {
       &[data-dismiss="modal"] {
-        background-color: $m-color_12;
-        color: $m-color_4;
+        background-color: #fff;
+        color: $primary;
         font-weight: 700;
-        border: 1px solid $m-color_12;
+        border: 1px solid #e8e8e8;
         padding: 10px 25px;
 
         svg {
@@ -199,7 +219,7 @@
         background-color: $m-color_14;
         color: #fff;
         font-weight: 600;
-        border: 1px solid $m-color_14;
+        border: 1px solid $m-color_3;
         padding: 10px 25px;
       }
     }
@@ -207,7 +227,7 @@
 
   .switch {
     .view-grid:hover, .view-list:hover, .active-view {
-      color: $m-color_14;
+      color: $primary;
       fill: rgba(27, 85, 226, 0.2392156863);
     }
   }
@@ -220,7 +240,6 @@
         font-weight: 600;
         margin-bottom: 0;
         margin-left: 39px;
-        color: $m-color_4;
       }
 
       .n-chk {
@@ -239,14 +258,17 @@
       min-width: 0;
       word-wrap: break-word;
       justify-content: space-between;
-      background: $m-color_10;
+      background: #fff;
       margin-bottom: 8px;
       border-radius: 6px;
       padding: 13px 18px;
       width: 100%;
       min-width: 767px;
       transition: all 0.35s ease;
-      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+
+      /* box-shadow: 0px 2px 4px rgba(126,142,177,0.12); */
+      border: 1px solid $m-color_3;
+      box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
     }
 
     &:not(.items-header-section) .item-content:hover {
@@ -269,7 +291,7 @@
     .user-meta-info {
       .user-name {
         margin-bottom: 0;
-        color: $m-color_4;
+        color: $dark;
         font-weight: 600;
         font-size: 15px;
       }
@@ -326,25 +348,25 @@
       .delete-multiple {
         margin-right: 5px;
         cursor: pointer;
-        color: $m-color_4;
+        color: $m-color_9;
         width: 20px;
         fill: rgba(27, 85, 226, 0.2392156863);
 
         &:hover {
-          color: $m-color_14;
+          color: $primary;
         }
       }
 
       .edit, .delete {
         margin-right: 5px;
         cursor: pointer;
-        color: $m-color_4;
+        color: $m-color_9;
         width: 20px;
         fill: rgba(27, 85, 226, 0.2392156863);
       }
 
       .edit:hover, .delete:hover {
-        color: $m-color_14;
+        color: $primary;
       }
     }
   }
@@ -379,11 +401,11 @@
   padding-left: 15px;
 
   .item-content {
-    background-color: $m-color_10;
+    background-color: #fff;
     padding: 13px 18px;
-    -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
-    box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
     border-radius: 6px;
+    border: 1px solid $m-color_3;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
   }
 
   &.items-header-section {
@@ -410,7 +432,7 @@
       font-size: 21px;
       font-weight: 600;
       margin-bottom: 0;
-      color: $m-color_14;
+      color: $info;
     }
 
     .user-work {
@@ -427,12 +449,12 @@
     .info-title {
       font-size: 14px;
       font-weight: 600;
-      color: $m-color_6;
+      color: $dark;
       margin-bottom: 11px;
     }
 
     p {
-      color: $m-color_4;
+      color: $m-color_6;
       font-size: 13px;
       margin-bottom: 11px;
     }
@@ -442,7 +464,7 @@
     .info-title {
       font-size: 14px;
       font-weight: 600;
-      color: $m-color_6;
+      color: $dark;
       margin-bottom: 11px;
       margin-right: 10px;
     }
@@ -451,7 +473,7 @@
     justify-content: space-between;
 
     p {
-      color: $m-color_4;
+      color: $m-color_6;
       font-size: 13px;
       margin-bottom: 11px;
     }
@@ -461,7 +483,7 @@
     .info-title {
       font-size: 14px;
       font-weight: 600;
-      color: $m-color_6;
+      color: $dark;
       margin-bottom: 11px;
     }
 
@@ -469,7 +491,7 @@
     justify-content: space-between;
 
     p {
-      color: $m-color_4;
+      color: $m-color_6;
       font-size: 13px;
       margin-bottom: 11px;
       margin-right: 10px;
@@ -485,13 +507,13 @@
     .edit, .delete {
       margin-right: 5px;
       cursor: pointer;
-      color: $m-color_4;
+      color: $m-color_9;
       width: 20px;
       fill: rgba(27, 85, 226, 0.2392156863);
     }
 
     .edit:hover, .delete:hover {
-      color: $m-color_14;
+      color: $primary;
     }
   }
 }

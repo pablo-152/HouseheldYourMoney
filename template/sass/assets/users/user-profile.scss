@@ -5,9 +5,8 @@
 @import '../../base/base';    // Base Variables
 
 .widget-content-area {
-  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  border: 1px solid $m-color_3;
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
 }
 
 .layout-spacing {
@@ -30,15 +29,15 @@
     justify-content: center;
     align-self: center;
     background-color: $primary;
-    background: linear-gradient(to right, #3cba92 0%, #0ba360 100%);
+    background: linear-gradient(to right, #0081ff 0%, #0045ff 100%);
     border-radius: 50%;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 15px rgba(0, 69, 255, 0.2);
 
     svg {
       font-size: 17px;
       vertical-align: middle;
       margin-right: 0;
-      color: $m-color_19;
+      color: #fff;
       width: 19px;
       align-self: center;
     }
@@ -47,7 +46,8 @@
   h3 {
     position: relative;
     font-size: 21px;
-    color: $m-color_4;
+    font-weight: 600;
+    color: $dark;
     margin: 6px 0px 0 0;
 
     &:after {
@@ -55,7 +55,7 @@
       content: "";
       height: 2px;
       width: 55px;
-      background: $m-color_14;
+      background: $primary;
       border-radius: 50%;
       bottom: 9px;
       left: 15px;
@@ -74,7 +74,7 @@
       font-size: 20px;
       font-weight: 600;
       margin-top: 22px;
-      color: $m-color_14;
+      color: $primary;
     }
   }
 
@@ -91,7 +91,7 @@
       a {
         font-weight: 600;
         font-size: 15px;
-        color: $m-color_14;
+        color: $primary;
       }
     }
 
@@ -104,7 +104,7 @@
     }
 
     li:hover svg {
-      color: $m-color_14;
+      color: $primary;
       fill: rgba(27, 85, 226, 0.2392156863);
     }
 
@@ -112,7 +112,7 @@
       margin: 27px auto;
 
       div.social-icon {
-        border: 2px solid $dark;
+        border: 2px solid $m-color_3;
         border-radius: 50%;
         height: 35px;
         width: 35px;
@@ -123,7 +123,7 @@
 
       svg {
         margin-right: 0;
-        color: $m-color_4;
+        color: $primary;
         width: 19px;
         align-self: center;
       }
@@ -143,7 +143,8 @@
   h3 {
     position: relative;
     font-size: 21px;
-    color: $m-color_4;
+    font-weight: 600;
+    color: $dark;
     margin: 6px 0px 40px 0;
 
     &:after {
@@ -151,7 +152,7 @@
       content: "";
       height: 2px;
       width: 47px;
-      background: $m-color_14;
+      background: $primary;
       border-radius: 50%;
       bottom: -2px;
       left: 15px;
@@ -167,12 +168,14 @@
 
   .progress {
     height: 20px;
+    box-shadow: 1px 3px 20px 3px $m-color_1;
     margin-bottom: 31px;
 
     .progress-bar {
       background-color: $primary;
-      background: linear-gradient(to right, #2b5876 0%, #4e4376 100%);
+      background: linear-gradient(to right, #0081ff 0%, #0045ff 100%);
       border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 69, 255, 0.15), 0 8px 16px rgba(0, 69, 255, 0.2);
       font-size: 12px;
       letter-spacing: 1px;
       font-weight: 100;
@@ -203,7 +206,8 @@
   h3 {
     position: relative;
     font-size: 21px;
-    color: $m-color_4;
+    font-weight: 600;
+    color: $dark;
     margin: 6px 0px 40px 0;
 
     &:after {
@@ -211,7 +215,7 @@
       content: "";
       height: 2px;
       width: 30px;
-      background: $m-color_14;
+      background: $primary;
       border-radius: 50%;
       bottom: -2px;
       left: 15px;
@@ -221,11 +225,11 @@
   h5 {
     font-size: 16px;
     font-weight: 700;
-    color: $m-color_6;
+    color: $dark;
   }
 
   p {
-    color: $m-color_4;
+    color: $m-color_6;
     font-size: 15px;
   }
 
@@ -236,8 +240,8 @@
 
   .b-skills {
     padding: 22px 16px;
-    box-shadow: 2px 5px 17px 0 rgba(31, 45, 61, 0.1);
-    background: $m-color_18;
+    box-shadow: 2px 5px 17px 0 rgba(31, 45, 61, 0.17);
+    background: #fff;
     border-radius: 10px;
     padding: 30px 30px 24px;
 
@@ -271,7 +275,8 @@
   h3 {
     position: relative;
     font-size: 21px;
-    color: $m-color_4;
+    font-weight: 600;
+    color: $dark;
     margin: 6px 0px 40px 0;
 
     &:after {
@@ -279,7 +284,7 @@
       content: "";
       height: 2px;
       width: 97px;
-      background: $m-color_14;
+      background: $primary;
       border-radius: 50%;
       bottom: -2px;
       left: 15px;
@@ -291,7 +296,7 @@
 
     .t-dot {
       position: relative;
-      border-color: $m-color_14;
+      border-color: $primary;
       padding: 10px;
 
       &:before {
@@ -329,7 +334,7 @@
       border-top-width: 0;
       border-bottom-width: 0;
       border-radius: 0;
-      border-color: $m-color_12;
+      border-color: $m-color_2;
     }
 
     .t-dot img {
@@ -360,7 +365,7 @@
       p {
         font-size: 13px;
         margin: 0;
-        color: $m-color_4;
+        color: $m-color_9;
         font-weight: 600;
 
         a {
@@ -395,7 +400,8 @@
   h3 {
     position: relative;
     font-size: 21px;
-    color: $m-color_4;
+    font-weight: 600;
+    color: $dark;
     margin: 6px 0px 40px 0;
 
     &:after {
@@ -403,7 +409,7 @@
       content: "";
       height: 2px;
       width: 173px;
-      background: $m-color_14;
+      background: $primary;
       border-radius: 50%;
       bottom: -2px;
       left: 15px;
@@ -415,7 +421,7 @@
 
     .t-dot {
       position: relative;
-      border-color: $m-color_14;
+      border-color: $primary;
       padding: 10px;
 
       &:before {
@@ -453,7 +459,7 @@
       border-top-width: 0;
       border-bottom-width: 0;
       border-radius: 0;
-      border-color: $m-color_12;
+      border-color: $m-color_2;
     }
 
     .t-dot img {
@@ -484,7 +490,7 @@
       p {
         font-size: 13px;
         margin: 0;
-        color: $m-color_4;
+        color: $m-color_9;
         font-weight: 600;
 
         a {

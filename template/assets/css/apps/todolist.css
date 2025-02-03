@@ -1,7 +1,6 @@
 .layout-px-spacing {
     min-height: auto!important;
 }
-
 /*----------Theme checkbox---------*/
 
 .new-control {
@@ -17,12 +16,10 @@
 .mail-box-container {
     position: relative;
     display: flex;
-    border-radius: 6px;
     margin-bottom: 10px;
-    background: #0e1726;
-    -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
 }
 .mail-overlay {
     display: none;
@@ -42,11 +39,11 @@
     position: relative;
     padding: 20px 15px;
     max-width: 240px;
-    border-right: 1px solid #191e3a;
+    border-right: 1px solid #e0e6ed;
 }
 .tab-title svg.feather-clipboard {
-    color: #0e1726;
-    fill: #61b6cd;
+    color: #4361ee;
+    fill: rgba(27, 85, 226, 0.23921568627450981);
     margin-bottom: 13px;
 }
 .tab-title h5 {
@@ -54,18 +51,17 @@
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #888ea8;
+    color: #515365;
 }
 .tab-title #addTask {
     position: absolute;
     font-size: 14px;
     padding: 9px 20px;
     border: none; 
-    color: #191e3a;
+    color: #fff;
     bottom: 32px;
     left: 17%;
-    background-color: #61b6cd;
-    box-shadow: none;
+    background-color: rgb(111, 64, 211);
 }
 .tab-title #addTask svg { margin-right: 5px; }
 .tab-title.mail-menu-show {
@@ -85,12 +81,14 @@
 }
 .tab-title .nav-pills {}
 .tab-title .nav-pills .nav-link.active svg {
-    color: #191e3a;
+    color: #4361ee;
+    fill: rgba(27, 85, 226, 0.23921568627450981);
 }
 .tab-title .nav-pills .nav-link.active {
     background-color: transparent;
-    color: #191e3a;
-    background: #61b6cd;
+    color: #4361ee;
+    color: #4361ee;
+    background: #ebedf2;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 10px 12px 10px 14px;
@@ -121,14 +119,12 @@
     padding: 0!important;
     font-size: 15px;
     top: 11px;
-    color: #191e3a!important;
+    color: #4361ee!important;
 }
-.tab-title .nav-pills a.nav-link.active:hover { color: #0e1726; }
-.tab-title .nav-pills a.nav-link.active:hover svg {
-    color: #0e1726;
-}
+.tab-title .nav-pills a.nav-link:hover { color: #4361ee; }
 .tab-title .nav-pills a.nav-link:hover svg {
-    fill: rgba(136, 142, 168, 0.25882352941176473);
+    color: #4361ee;
+    fill: rgba(27, 85, 226, 0.23921568627450981);
 }
 .tab-title .nav-pills a.nav-link svg {
     color: #888ea8;
@@ -138,9 +134,9 @@
     height: 21px;
     fill: rgba(0, 23, 55, 0.08);
 }
-.tab-title .nav-pills .nav-link#all-list .badge { color: #607d8b; border-color: #607d8b; }
-.tab-title .nav-pills .nav-link#todo-task-done .badge { color: #2196f3; border-color: #2196f3; }
-.tab-title .nav-pills .nav-link#todo-task-important .badge { color: #e2a03f; border-color: #e2a03f; }
+.tab-title .nav-pills .nav-link#all-list .badge { color: #3b3f5c; }
+.tab-title .nav-pills .nav-link#todo-task-done .badge { color: #2196f3; }
+.tab-title .nav-pills .nav-link#todo-task-important .badge { color: #e95f2b; }
 
 /*
 =====================
@@ -158,20 +154,18 @@
 .todo-inbox .search input {
     border: none;
     padding: 12px 13px 12px 13px;
-    border-bottom: 1px solid #191e3a;
+    border-bottom: 1px solid #e0e6ed;
     background: transparent;
     border-radius: 0;
-    box-shadow: none;
-    color: #009688;
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
 }
 .todo-inbox .mail-menu {
+    background: #fff;
     margin: 7px 13px 7px 13px;
     width: 25px;
     border-radius: 0;
     color: #515365;
     align-self: center;
-    border-bottom: 1px solid #191e3a;
+    border-bottom: 1px solid #e0e6ed;
 }
 .todo-inbox .todo-item-inner { display: flex; }
 .todo-inbox .message-box {
@@ -190,7 +184,7 @@
     position: relative;
 }
 .todo-inbox .todo-item:hover { }
-.todo-inbox .todo-item:not(:last-child) { border-bottom: 1px solid #191e3a; }
+.todo-inbox .todo-item:not(:last-child) { border-bottom: 1px solid #e0e6ed; }
 .todo-inbox .todo-item.todo-task-trash { display: none; }
 .todo-inbox .todo-item.todo-task-trash.trash-show { display: block; }
 .todo-inbox .todo-item .todo-item-inner .n-chk { padding: 20px 10px 20px 10px; }
@@ -201,7 +195,7 @@
 .todo-inbox .todo-item .todo-item-inner .todo-heading {
     font-size: 18px;
     font-weight: 600;
-    color: #bfc9d4;
+    color: #515365;
     margin-bottom: 2px;
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
@@ -213,8 +207,8 @@
 .todo-inbox .todo-item .todo-item-inner p.todo-text {
     font-size: 14px;
     margin-bottom: 0;
-    color: #e3e4eb;
-    font-weight: 600;
+    color: #888ea8;
+    font-weight: 500;
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
     overflow: hidden!important;
@@ -230,7 +224,7 @@
     margin-bottom: 0;
     font-size: 12px;
     font-weight: 600;
-    color: #888ea8;
+    color: #61b6cd;
     -webkit-transition: all 0.35s ease;
     transition: all 0.35s ease;
 }
@@ -300,13 +294,14 @@
     color: #888ea8;
 }
 .todo-inbox .todo-item .todo-item-inner .action-dropdown .show .dropdown-toggle svg {
-    color: #bfc9d4;
+    color: #1b2e4b;
 }
 .todo-inbox .todo-item.todo-task-done .todo-item-inner .todo-heading { text-decoration: line-through; }
 .todo-inbox .todo-item.todo-task-done .todo-item-inner p.meta-date { text-decoration: line-through; }
 .todo-inbox .todo-item.todo-task-done .todo-item-inner p.todo-text { text-decoration: line-through; }
 .modal-content {
     border: none;
+    box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
 }
 .modal-content svg.close {
     position: absolute;
@@ -315,10 +310,10 @@
     font-size: 12px;
     font-weight: 600;
     padding: 2px;
-    background: #1b2e4b;
+    background: #fff;
     border-radius: 5px;
     opacity: 1;
-    color: #009688;
+    color: #4361ee;
     box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
     cursor: pointer;
     transition: .600s;
@@ -334,8 +329,10 @@
     padding: 0 16px;
 }
 .compose-box {
+    background-color: #fff;
     border-radius: 6px;
 }
+.compose-box .compose-content {}
 #todoShowListItem .modal-content .modal-body {
     padding-left: 0;
     padding-right: 0;
@@ -343,37 +340,35 @@
 #todoShowListItem .compose-content h5 {
     margin-bottom: 19px;
     padding-bottom: 19px;
-    border-bottom: 1px solid #191e3a;
+    border-bottom: 1px solid #e0e6ed;
 }
 .compose-box .compose-content h5 {
     font-weight: 700;
     font-size: 18px;
-    color: #bfc9d4;
+    color: #3b3f5c;
     text-align: center;
     margin-bottom: 35px;
 }
 .compose-box .compose-content .task-text p { word-break: break-word; }
 .compose-box .compose-content .task-text img { max-width: 100%; }
-#todoShowListItem .modal-footer {
-    border-top: 1px solid #191e3a;
-}
 #todoShowListItem .modal-footer .btn[data-dismiss="modal"] {
-    background-color: #1b2e4b;
-    color: #bfc9d4;
+    background-color: #fff;
+    color: #4361ee;
     font-weight: 700;
-    border: 1px solid #1b2e4b;
+    border: 1px solid #e8e8e8;
     padding: 10px 25px;
 }
 #todoShowListItem .modal-footer .btn[data-dismiss="modal"] svg {
     margin-right: 8px;
     width: 19px;
     height: 19px;
+    vertical-align: sub;
 }
 .compose-box .compose-content form svg {
     align-self: center;
     font-size: 19px;
     margin-right: 14px;
-    color: #009688;
+    color: #4361ee;
     font-weight: 600;
 }
 .compose-box .compose-content form #taskdescription { height: 170px; }
@@ -391,10 +386,10 @@
     padding-top: 0;
 }
 #addTaskModal .modal-footer .btn[data-dismiss="modal"] {
-    background-color: #1b2e4b;
-    color: #bfc9d4;
+    background-color: #fff;
+    color: #4361ee;
     font-weight: 700;
-    border: 1px solid #1b2e4b;
+    border: 1px solid #e8e8e8;
     padding: 10px 25px;
 }
 #addTaskModal .modal-footer .btn.add-tsk {
@@ -405,10 +400,9 @@
     padding: 10px 25px;
 }
 #addTaskModal .modal-footer .btn.edit-tsk {
-    background-color: #009688;
+    background-color: #1abc9c;
     color: #fff;
     font-weight: 600;
-    border: 1px solid #009688;
     padding: 10px 25px;
 }
 .modal-backdrop { background-color: #515365; }
@@ -426,10 +420,10 @@
         overflow-x: hidden;
         overflow-y: auto;
     }
-    .todo-inbox .search { border-bottom: 1px solid #191e3a; }
+    .todo-inbox .search { border-bottom: 1px solid #e0e6ed; }
     .todo-inbox .mail-menu { border-bottom: none; }
     .todo-inbox .search input {
-        border-right: 1px solid #191e3a;
+        border-right: 1px solid #e0e6ed;
         border-bottom: none;
     }
     .todo-inbox .todo-item .todo-item-inner p.todo-text {
@@ -440,7 +434,7 @@
         z-index: 4;
         left: -100px;
         width: 0;
-        background: #0e1726;
+        background: #fff;
     }
     .todo-inbox {
         -ms-flex: 0 0 100%;

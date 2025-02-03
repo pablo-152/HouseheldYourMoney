@@ -23,11 +23,11 @@
 /*Style. 1*/
 .style-1 .user-name {
   font-size: 15px;
-  color: #888ea8; }
+  color: #805dca; }
 
 .style-1 .profile-img img {
   border-radius: 6px;
-  background-color: #3b3f5c;
+  background-color: #ebedf2;
   padding: 2px;
   width: 35px;
   height: 35px; }
@@ -42,7 +42,7 @@
   color: #e2a03f; }
 
 .style-2 img.profile-img {
-  background-color: #3b3f5c;
+  background-color: #ebedf2;
   padding: 2px;
   width: 35px;
   height: 35px; }
@@ -58,7 +58,7 @@
 
 .style-3 img.profile-img {
   border-radius: 6px;
-  background-color: #3b3f5c;
+  background-color: #ebedf2;
   padding: 2px;
   width: 35px;
   height: 35px; }
@@ -70,7 +70,18 @@
     list-style: none;
     display: inline; }
     .style-3 .table-controls li svg {
+      /* color: $m-color_6;
+        vertical-align: middle;
+        width: 28px;
+        height: 28px;
+        fill: rgba(0, 23, 55, 0.08);
+        cursor: pointer; */
+      /* color: $dark;
+        margin-right: 6px;
+        vertical-align: middle;
+        fill: $m-color_1; */
       cursor: pointer;
+      /* stroke-width: 1; */
       margin: 0;
       vertical-align: middle;
       cursor: pointer;
@@ -80,7 +91,8 @@
       height: 28px; }
 
 .style-3.table-hover:not(.table-dark) tbody tr:hover .table-controls li svg {
-  color: #888ea8; }
+  color: #191e3a;
+  /* fill: rgba(231, 81, 90, 0.2196078431372549); */ }
 
 .style-3.table-hover:not(.table-dark) tbody tr:hover td:first-child {
   color: #4361ee !important; }

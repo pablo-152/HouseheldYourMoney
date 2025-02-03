@@ -4,6 +4,7 @@
 
 @import '../../base/base';    // Base Variables
 
+
 /*      Alert       */
 
 .alert {
@@ -26,7 +27,7 @@
     vertical-align: middle;
     width: 33px;
     height: 33px;
-    stroke-width: 1.2;
+    stroke-width: 1.5;
   }
 
   .close {
@@ -124,8 +125,8 @@
 
 .alert-light-primary {
   color: $primary;
-  background-color: rgba(67, 97, 238, 0.15);
-  border-color: rgba(67, 97, 238, 0.55);
+  background-color: $l-primary;
+  border-color: $primary;
 
   svg.close {
     color: $primary;
@@ -134,8 +135,8 @@
 
 .alert-light-warning {
   color: $warning;
-  background-color: rgba(226, 160, 63, 0.15);
-  border-color: rgba(226, 160, 63, 0.55);
+  background-color: $l-warning;
+  border-color: $warning;
 
   svg.close {
     color: $warning;
@@ -144,8 +145,8 @@
 
 .alert-light-success {
   color: $success;
-  background-color: rgba(26, 188, 156, 0.15);
-  border-color: rgba(26, 188, 156, 0.55);
+  background-color: $l-success;
+  border-color: $success;
 
   svg.close {
     color: $success;
@@ -154,8 +155,8 @@
 
 .alert-light-info {
   color: $info;
-  background-color: rgba(33, 150, 243, 0.15);
-  border-color: rgba(33, 150, 243, 0.55);
+  background-color: $l-info;
+  border-color: $info;
 
   svg.close {
     color: $info;
@@ -164,8 +165,8 @@
 
 .alert-light-danger {
   color: $danger;
-  background-color: rgba(231, 81, 90, 0.15);
-  border-color: rgba(231, 81, 90, 0.55);
+  background-color: $l-danger;
+  border-color: $danger;
 
   svg.close {
     color: $danger;
@@ -173,9 +174,9 @@
 }
 
 .alert-light-dark {
-  color: $m-color_4;
-  background-color: rgba(59, 63, 92, 0.15);
-  border-color: rgba(59, 63, 92, 0.55);
+  color: $dark;
+  background-color: $l-dark;
+  border-color: $dark;
 
   svg.close {
     color: $dark;
@@ -188,7 +189,6 @@
   color: #fff;
   background: #fff url(../../img/ab-1.jpeg) no-repeat center center;
   background-size: cover;
-  border: none;
 }
 
 /*  Gradient Alerts      */
@@ -208,7 +208,7 @@
   background-color: $m-color_25;
   border-color: $m-color_25;
   border-radius: 5px;
-  color: $m-color_18;
+  color: #fff;
 
   .alert-icon {
     margin-right: 25px;

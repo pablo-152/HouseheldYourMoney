@@ -49,11 +49,11 @@
     }
 
     &.t-dot-primary:before {
-      border-color: $primary;
+      border-color: #1b55e2;
     }
 
     &.t-dot-success:before {
-      border-color: $success;
+      border-color: #8dbf42;
     }
 
     &.t-dot-warning:before {
@@ -73,11 +73,11 @@
     }
 
     &.t-dot-primary:after {
-      border-color: $primary;
+      border-color: #1b55e2;
     }
 
     &.t-dot-success:after {
-      border-color: $success;
+      border-color: #8dbf42;
     }
 
     &.t-dot-warning:after {
@@ -119,11 +119,11 @@
     p {
       font-size: 13px;
       margin: 0;
-      color: $m-color_6;
+      color: $dark;
       font-weight: 600;
 
       a {
-        color: $m-color_14;
+        color: #1b55e2;
         font-weight: 600;
       }
     }
@@ -135,7 +135,7 @@
     max-width: 100px;
     font-size: 16px;
     font-weight: 600;
-    color: $m-color_6;
+    color: $dark;
     padding: 10px 0;
   }
 
@@ -145,7 +145,7 @@
     max-width: 100px;
     font-size: 12px;
     font-weight: 700;
-    color: $m-color_7;
+    color: $m-color_6;
     align-self: center;
   }
 }

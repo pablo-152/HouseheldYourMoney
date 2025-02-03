@@ -9,14 +9,15 @@
     padding: 11px 35px 10px 15px;
     position: relative;
     padding: 9px 8px 10px 12px;
+    border: 1px solid $m-color_5;
     border-radius: 6px;
     transform: none;
     font-size: 13px;
     line-height: 17px;
-    background-color: $m-color_12;
+    background-color: #fff;
     letter-spacing: normal;
     text-align: inherit;
-    color: $m-color_4;
+    color: $m-color_12;
     box-shadow: none;
     max-height: 35px;
     display: inline-block;
@@ -41,7 +42,7 @@
       display: inline-block;
       position: absolute;
       padding: 6px 4px;
-      background: $m-color_12;
+      background: #fff;
       top: 2px;
       right: 1px;
     }
@@ -85,7 +86,8 @@
   padding: 0;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: $m-color_10;
+  background-color: #fff;
+  border: 1px solid $m-color_3;
   box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
   border-radius: 6px;
 }
@@ -117,11 +119,10 @@
     height: 120px;
     border-radius: 6px;
     padding: 7px;
-    border: 1px solid $m-color_12;
-    background: $m-color_12;
+    border: 1px solid $m-color_3;
 
     .dropify-preview {
-      background-color: $m-color_12;
+      background-color: #FFF;
       padding: 0;
     }
 
@@ -161,12 +162,14 @@
     }
 
     &.touch-fallback {
+      border: 1px solid $m-color_2;
+
       .dropify-preview .dropify-infos .dropify-infos-inner {
         padding: 0;
       }
 
       .dropify-clear {
-        color: $m-color_6;
+        color: $m-color_9;
         position: relative;
       }
 
@@ -183,13 +186,14 @@
   .invoice-address-company {
     h4 {
       font-size: 18px;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
     .invoice-address-company-fields {
       label {
         font-size: 14px;
-        color: $m-color_6;
+        color: $m-color_9;
         min-width: 75px;
         align-self: center;
         margin-bottom: 0;
@@ -204,13 +208,14 @@
   .invoice-address-client {
     h4 {
       font-size: 18px;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
     .invoice-address-client-fields {
       label {
         font-size: 14px;
-        color: $m-color_6;
+        color: $m-color_9;
         min-width: 75px;
         align-self: center;
         margin-bottom: 0;
@@ -235,11 +240,11 @@
   padding: 0 48px;
   padding-top: 25px;
   margin-top: 40px;
-  border-top: 1px solid $m-color_18;
+  border-top: 1px solid $m-color_2;
 
   label {
     font-size: 14px;
-    color: $m-color_6;
+    color: $m-color_9;
     min-width: 75px;
     align-self: center;
     margin-bottom: 0;
@@ -249,7 +254,7 @@
 /* Detail Items */
 
 .invoice-detail-items {
-  background: $m-color_10;
+  background: $m-color_20;
   padding: 30px;
   padding: 30px 48px;
 
@@ -259,15 +264,13 @@
     border: none;
     border-top: 1px solid $m-color_3;
     border-bottom: 1px solid $m-color_3;
-    color: $m-color_6 !important;
-    background: $m-color_10 !important;
+    color: $m-color_9 !important;
   }
 
   tbody td {
     border: none;
     padding: 14px 7px;
     vertical-align: top !important;
-    background: $m-color_10 !important;
   }
 }
 
@@ -307,7 +310,7 @@
       list-style: none;
 
       svg {
-        color: $m-color_6;
+        color: $m-color_9;
         stroke-width: 1.5;
         height: 19px;
         width: 19px;
@@ -343,7 +346,7 @@
 
     label {
       font-size: 14px;
-      color: $m-color_6;
+      color: $m-color_9;
       min-width: 75px;
       align-self: center;
       margin-bottom: 0;
@@ -384,14 +387,14 @@
     min-width: 60px;
     text-align: right;
     font-size: 14px;
-    color: $m-color_6;
+    color: $m-color_9;
     font-weight: 600;
   }
 
   &.invoice-summary-balance-due {
     padding-top: 5px;
     margin-top: 5px;
-    border-top: 1px solid $m-color_18;
+    border-top: 1px solid $m-color_2;
 
     .invoice-summary-label {
       font-size: 14px;
@@ -408,14 +411,14 @@
   padding: 0 48px;
   padding-top: 25px;
   margin-top: 40px;
-  border-top: 1px solid $m-color_18;
+  border-top: 1px solid $m-color_2;
 
   .invoice-note {
     margin-bottom: 0;
 
     label {
       font-size: 14px;
-      color: $m-color_6;
+      color: $m-color_9;
       min-width: 75px;
       align-self: center;
       margin-bottom: 0;
@@ -437,13 +440,14 @@
   padding: 0;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: $m-color_10;
+  background-color: #fff;
+  border: 1px solid $m-color_3;
   border-radius: 6px;
 
   label {
     font-size: 13px;
     font-weight: 600;
-    color: $m-color_4;
+    color: $m-color_9;
   }
 
   .invoice-action-currency {
@@ -451,10 +455,10 @@
       padding: 0 25px 10px 25px;
       padding-bottom: 10px;
       margin-bottom: 20px;
-      border-bottom: 1px solid $m-color_18;
+      border-bottom: 1px solid $m-color_2;
       width: 100%;
       font-size: 16px;
-      color: $m-color_3;
+      color: $primary;
       font-weight: 500;
     }
 
@@ -483,6 +487,10 @@
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $m-color_1;
+        }
       }
 
       img {
@@ -500,10 +508,10 @@
       width: 100%;
       padding-bottom: 10px;
       margin-bottom: 20px;
-      border-bottom: 1px solid $m-color_18;
+      border-bottom: 1px solid $m-color_2;
       width: 100%;
       font-size: 16px;
-      color: $m-color_3;
+      color: $primary;
       font-weight: 500;
     }
 
@@ -514,14 +522,15 @@
     .input-rate {
       position: relative;
       padding: 9px 15px 10px 15px;
+      border: 1px solid $m-color_5;
       border-radius: 6px;
       transform: none;
       font-size: 13px;
       line-height: 17px;
-      background-color: $m-color_12;
+      background-color: #fff;
       letter-spacing: normal;
       text-align: inherit;
-      color: $m-color_4;
+      color: $m-color_12;
       box-shadow: none;
       max-height: 35px;
       display: inline-block;
@@ -541,24 +550,25 @@
       padding: 0 25px 10px 25px;
       padding-bottom: 10px;
       margin-bottom: 20px;
-      border-bottom: 1px solid $m-color_18;
+      border-bottom: 1px solid $m-color_2;
       width: 100%;
       font-size: 16px;
-      color: $m-color_3;
+      color: $primary;
       font-weight: 500;
     }
 
     .input-rate {
       position: relative;
       padding: 9px 15px 10px 15px;
+      border: 1px solid $m-color_5;
       border-radius: 6px;
       transform: none;
       font-size: 13px;
       line-height: 17px;
-      background-color: $m-color_12;
+      background-color: #fff;
       letter-spacing: normal;
       text-align: inherit;
-      color: $m-color_4;
+      color: $m-color_12;
       box-shadow: none;
       max-height: 35px;
       display: inline-block;
@@ -567,10 +577,6 @@
 }
 
 /* Invoice Actions -> action-currency */
-
-/* .invoice-actions .invoice-action-currency .dropdown:not(.custom-dropdown-icon):not(.custom-dropdown) .dropdown-menu .dropdown-item:not(:last-child) {
-    border-bottom: 1px solid $m-color_1;
-} */
 
 /* Invoice Actions -> action-tax */
 
@@ -587,13 +593,14 @@
   padding-top: 32px;
   padding-bottom: 32px;
   margin-top: 25px;
-  background-color: $m-color_10;
+  background-color: #fff;
+  border: 1px solid $m-color_3;
   border-radius: 6px;
 
   label {
     font-size: 14px;
     font-weight: 600;
-    color: $m-color_6;
+    color: $m-color_9;
   }
 
   .invoice-action-btn a {
@@ -729,8 +736,9 @@
       }
 
       tr {
+        background: $m-color_20;
         display: block;
-        padding: 25px 0;
+        padding: 25px 5px;
         border-radius: 8px;
         position: relative;
 

@@ -1,8 +1,5 @@
 try {
 
-  Apex.tooltip = {
-    theme: 'dark'
-  }
 
   /*
       ==============================
@@ -20,199 +17,141 @@ try {
   // Total Visits
 
   var spark1 = {
-    chart: {
-        id: 'unique-visits',
-        group: 'sparks2',
+      chart: {
+          id: 'unique-visits',
+          group: 'sparks2',
+          type: 'line',
+          height: 58,
+          sparkline: {
+              enabled: true
+          },
+          dropShadow: {
+            enabled: true,
+            top: 3,
+            left: 1,
+            blur: 3,
+            color: '#009688',
+            opacity: 0.7,
+          }
+      },
+      series: [{
+          data: [21, 9, 36, 12, 44, 25, 59, 41, 66, 25]
+      }],
+      stroke: {
+        curve: 'smooth',
+        width: 2,
+      },
+      markers: {
+          size: 0
+      },
+      grid: {
+        padding: {
+          top: 0,
+          bottom: 0,
+          left: 0
+        }
+      },
+      colors: ['#009688'],
+      tooltip: {
+          x: {
+              show: false
+          },
+          y: {
+              title: {
+                  formatter: function formatter(val) {
+                      return '';
+                  }
+              }
+          }
+      },
+      responsive: [
+      {
+          breakpoint: 576,
+          options: {
+             chart: {
+                height: 95,
+            },
+            grid: {
+                padding: {
+                  top: 45,
+                  bottom: 0,
+                  left: 0
+                }
+            },
+          },
+      }
+
+      ]
+  }
+
+  // Paid Visits
+
+  var spark2 = {
+      chart: {
+        id: 'total-users',
+        group: 'sparks1',
         type: 'line',
-        height: 80,
+        height: 58,
         sparkline: {
-            enabled: true
+          enabled: true
         },
         dropShadow: {
-            enabled: true,
-            top: 1,
-            left: 1,
-            blur: 2,
-            color: '#e2a03f',
-            opacity: 0.7,
-        }
-    },
-    series: [{
-        data: [21, 9, 36, 12, 44, 25, 59, 41, 66, 25]
-    }],
-    stroke: {
-      curve: 'smooth',
-      width: 2,
-    },
-    markers: {
-        size: 0
-    },
-    grid: {
-      padding: {
-        top: 35,
-        bottom: 0,
-        left: 40
+          enabled: true,
+          top: 1,
+          left: 1,
+          blur: 2,
+          color: '#e2a03f',
+          opacity: 0.7,
       }
-    },
-    colors: ['#e2a03f'],
-    tooltip: {
+      },
+      series: [{
+        data: [22, 19, 30, 47, 32, 44, 34, 55, 41, 69]
+      }],
+      stroke: {
+        curve: 'smooth',
+        width: 2,
+      },
+      markers: {
+        size: 0
+      },
+      grid: {
+        padding: {
+          top: 0,
+          bottom: 0,
+          left: 0
+        }
+      },
+      colors: ['#e2a03f'],
+      tooltip: {
         x: {
-            show: false
+          show: false
         },
         y: {
-            title: {
-                formatter: function formatter(val) {
-                    return '';
-                }
+          title: {
+            formatter: function formatter(val) {
+              return '';
             }
-        }
-    },
-    responsive: [{
-        breakpoint: 1351,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 1200,
-        options: {
-           chart: {
-              height: 80,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 40
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 576,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 45,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    }
-
-    ]
-}
-
-// Paid Visits
-
-var spark2 = {
-    chart: {
-      id: 'total-users',
-      group: 'sparks1',
-      type: 'line',
-      height: 80,
-      sparkline: {
-        enabled: true
-      },
-      dropShadow: {
-        enabled: true,
-        top: 3,
-        left: 1,
-        blur: 3,
-        color: '#009688',
-        opacity: 0.7,
-      }
-    },
-    series: [{
-      data: [22, 19, 30, 47, 32, 44, 34, 55, 41, 69]
-    }],
-    stroke: {
-      curve: 'smooth',
-      width: 2,
-    },
-    markers: {
-      size: 0
-    },
-    grid: {
-      padding: {
-        top: 35,
-        bottom: 0,
-        left: 40
-      }
-    },
-    colors: ['#009688'],
-    tooltip: {
-      x: {
-        show: false
-      },
-      y: {
-        title: {
-          formatter: function formatter(val) {
-            return '';
           }
         }
+      },
+      responsive: [
+      {
+          breakpoint: 576,
+          options: {
+             chart: {
+                height: 95,
+            },
+            grid: {
+                padding: {
+                  top: 35,
+                  bottom: 0,
+                  left: 0
+                }
+            },
+          },
       }
-    },
-    responsive: [{
-        breakpoint: 1351,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 1200,
-        options: {
-           chart: {
-              height: 80,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 40
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 576,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    }
-    ]
-}
+      ]
+  }
   
 
   /*
@@ -221,85 +160,73 @@ var spark2 = {
       ===================================
   */
 
-      var d_1options1 = {
-        chart: {
-            height: 350,
-            type: 'bar',
-            toolbar: {
-              show: false,
-            },
-            dropShadow: {
-                enabled: true,
-                top: 1,
-                left: 1,
-                blur: 1,
-                color: '#515365',
-                opacity: 0.3,
-            }
-        },
-        colors: ['#5c1ac3', '#ffbb44'],
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                columnWidth: '55%',
-                endingShape: 'rounded'  
-            },
-        },
-        dataLabels: {
-            enabled: false
-        },
-        legend: {
-              position: 'bottom',
-              horizontalAlign: 'center',
-              fontSize: '14px',
-              markers: {
-                width: 10,
-                height: 10,
-              },
-              itemMargin: {
-                horizontal: 0,
-                vertical: 8
-              }
-        },
-        grid: {
-          borderColor: '#191e3a',
-        },
-        stroke: {
-            show: true,
-            width: 2,
-            colors: ['transparent']
-        },
-        series: [{
-            name: 'Direct',
-            data: [58, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
-        }, {
-            name: 'Organic',
-            data: [91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
-        }],
-        xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shade: 'dark',
-            type: 'vertical',
-            shadeIntensity: 0.3,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 0.8,
-            stops: [0, 100]
+    var d_1options1 = {
+      chart: {
+          height: 350,
+          type: 'bar',
+          toolbar: {
+            show: false,
           }
-        },
-        tooltip: {
-          theme: 'dark',
-            y: {
-                formatter: function (val) {
-                    return val
-                }
+      },
+      colors: ['#5c1ac3', '#d6b007'],
+      plotOptions: {
+          bar: {
+              horizontal: false,
+              columnWidth: '55%',
+              endingShape: 'rounded'  
+          },
+      },
+      dataLabels: {
+          enabled: false
+      },
+      legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            fontSize: '14px',
+            markers: {
+              width: 10,
+              height: 10,
+            },
+            itemMargin: {
+              horizontal: 0,
+              vertical: 8
             }
+      },
+      stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+      },
+      series: [{
+          name: 'Direct',
+          data: [58, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
+      }, {
+        name: 'Organic',
+        data: [91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
+      }],
+      xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      },
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'light',
+          type: 'vertical',
+          shadeIntensity: 0.3,
+          inverseColors: false,
+          opacityFrom: 1,
+          opacityTo: 0.8,
+          stops: [0, 100]
         }
+      },
+      tooltip: {
+          y: {
+              formatter: function (val) {
+                  return val
+              }
+          }
       }
+    }
 
   /*
       ==============================
@@ -336,17 +263,6 @@ var spark2 = {
         show: false,
       }
     },
-    fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
-      }
-    }
   }
 
   // Referral
@@ -376,17 +292,6 @@ var spark2 = {
     tooltip: {
       x: {
         show: false,
-      }
-    },
-    fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
       }
     }
   }
@@ -421,17 +326,6 @@ var spark2 = {
     tooltip: {
       x: {
         show: false,
-      }
-    },
-    fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
       }
     }
   }

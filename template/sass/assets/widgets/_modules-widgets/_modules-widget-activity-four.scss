@@ -4,7 +4,7 @@
     ========================
 */
 
-.widget.widget-activity-four {
+.widget-activity-four {
   padding-right: 0;
   padding-left: 0;
 
@@ -21,22 +21,21 @@
         padding: 6px;
         border-radius: 10px;
         padding: 6px;
-        background: $dark !important;
+        background: #c7e6e4 !important;
         border: none;
         -webkit-transform: translateY(0);
         transform: translateY(0);
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 
         svg {
-          color: #fff;
+          color: $m-color_14;
         }
       }
     }
   }
 
-  .mt-container-ra {
+  .mt-container {
     position: relative;
-    height: 325px;
+    height: 326px;
     overflow: auto;
     padding-right: 12px;
   }
@@ -64,7 +63,7 @@
         border-radius: 50%;
         width: 6px;
         height: 6px;
-        top: 5px;
+        top: 7px;
         left: 5px;
         transform: translateX(-50%);
         border-color: $m-color_3;
@@ -95,27 +94,33 @@
     }
 
     &.timeline-primary .t-dot:before {
-      background: $primary;
+      background: $l-primary;
+      border: 2px solid rgba(27, 85, 226, 0.33);
     }
 
     &.timeline-success .t-dot:before {
-      background-color: $m-color_14;
+      background-color: $l-success;
+      border: 2px solid rgb(154, 210, 205);
     }
 
     &.timeline-danger .t-dot:before {
-      background-color: $danger;
+      background-color: $l-danger;
+      border: 2px solid rgb(241, 172, 176);
     }
 
     &.timeline-dark .t-dot:before {
-      background-color: $m-color_11;
+      background-color: $l-dark;
+      border: 2px solid rgb(159, 163, 187);
     }
 
     &.timeline-secondary .t-dot:before {
-      background: $secondary;
+      background: $l-secondary;
+      border: 2px solid rgba(92, 26, 195, 0.35);
     }
 
     &.timeline-warning .t-dot:before {
-      background-color: $warning;
+      background-color: $l-warning;
+      border: 2px solid rgb(222, 199, 165);
     }
 
     &:last-child .t-dot:after {
@@ -144,9 +149,8 @@
         margin: 0;
         font-size: 13px;
         letter-spacing: 0;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 0;
-        color: $m-color_4;
 
         a {
           margin-bottom: 0;
@@ -170,39 +174,39 @@
     }
 
     &.timeline-primary .t-text span.badge {
-      color: #fff;
+      color: $primary;
       border: 1px solid $primary;
-      background-color: $primary;
+      background-color: $l-primary;
     }
 
     &.timeline-secondary .t-text span.badge {
-      color: #fff;
+      color: $secondary;
       border: 1px solid $secondary;
-      background-color: $secondary;
+      background-color: $l-secondary;
     }
 
     &.timeline-danger .t-text span.badge {
-      color: #fff;
+      color: $danger;
       border: 1px solid $danger;
-      background-color: $danger;
+      background-color: $l-danger;
     }
 
     &.timeline-warning .t-text span.badge {
-      color: #fff;
+      color: $warning;
       border: 1px solid $warning;
-      background-color: $warning;
+      background-color: $l-warning;
     }
 
     &.timeline-success .t-text span.badge {
-      color: #fff;
+      color: $m-color_14;
       border: 1px solid $m-color_14;
-      background-color: $m-color_14;
+      background-color: $l-success;
     }
 
     &.timeline-dark .t-text span.badge {
-      color: #fff;
+      color: $dark;
       border: 1px solid $dark;
-      background-color: $dark;
+      background-color: $l-dark;
     }
 
     &:hover .t-text span.badge {
@@ -234,7 +238,7 @@
       background: transparent;
       box-shadow: none;
       padding: 0;
-      color: $m-color_6;
+      color: $m-color_23;
       font-weight: 800;
       letter-spacing: 0;
       border: none;

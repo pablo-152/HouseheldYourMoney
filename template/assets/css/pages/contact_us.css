@@ -22,11 +22,11 @@
   .cu-contact-section .cu-section-header {
     margin-bottom: 50px; }
     .cu-contact-section .cu-section-header h4 {
-      color: #fff;
+      color: #0e1726;
       font-size: 34px;
       font-weight: 600; }
     .cu-contact-section .cu-section-header p {
-      color: #fff;
+      color: #506690;
       font-size: 15px; }
   .cu-contact-section .contact-form {
     top: 0;
@@ -46,7 +46,7 @@
         .cu-contact-section .contact-form form .input-fields svg {
           position: absolute;
           top: 11px;
-          color: #009688;
+          color: #4361ee;
           width: 20px;
           left: 25px; }
           .cu-contact-section .contact-form form .input-fields svg.feather-mail {
@@ -56,33 +56,35 @@
         font-size: 22px;
         font-weight: 600;
         margin-bottom: 25px;
-        color: #fff; }
+        color: #0e1726; }
       .cu-contact-section .contact-form form input {
         padding: 8px 5px 8px 40px;
         background-color: transparent;
         box-shadow: none;
-        color: #fff;
+        color: #0e1726;
         font-weight: 400; }
         .cu-contact-section .contact-form form input::-webkit-input-placeholder, .cu-contact-section .contact-form form input::-ms-input-placeholder, .cu-contact-section .contact-form form input::-moz-placeholder {
-          color: #d3d3d3;
+          color: #888ea8;
           font-size: 14px; }
   .cu-contact-section p {
-    color: #fff; }
+    color: #0e1726; }
   .cu-contact-section .n-chk {
     display: inline-block; }
+    .cu-contact-section .n-chk label {
+      color: #0e1726; }
 
 /* 	Contact Content 	*/
 .new-control.new-radio.radio-success > input:checked ~ span.new-control-indicator {
-  background: #009688 !important; }
+  background: #4361ee !important; }
 
 .cu-contact-section .form-group textarea {
   padding: 8px 5px 8px 43px;
   background-color: transparent;
   resize: none;
-  color: #fff;
+  color: #0e1726;
   font-weight: 400; }
   .cu-contact-section .form-group textarea::-webkit-input-placeholder, .cu-contact-section .form-group textarea::-ms-input-placeholder, .cu-contact-section .form-group textarea::-moz-placeholder {
-    color: #d3d3d3;
+    color: #888ea8;
     font-size: 14px; }
   .cu-contact-section .form-group textarea:-ms-input-placeholder {
     color: #7b8489; }
@@ -92,7 +94,7 @@
   padding: 15px 25px;
   display: block;
   width: 100%;
-  background-color: #009688 !important;
+  background-color: #4361ee !important;
   box-shadow: none; }
 
 @media (max-width: 991px) {
@@ -110,7 +112,7 @@
       width: 100%;
       border-radius: 0;
       height: 100%;
-      background-color: rgba(3, 3, 5, 0.42);
+      background-color: #030305;
       background-attachment: fixed;
       background-size: contain;
       -webkit-backdrop-filter: blur(12px);
@@ -134,7 +136,25 @@
     border-radius: 12px;
     color: #fff;
     font-weight: 400;
-    border: none; } }
+    border: none; }
+  .cu-contact-section .contact-form form input {
+    box-shadow: none;
+    color: #bfc9d4;
+    font-weight: 400; }
+  .cu-contact-section p {
+    color: #bfc9d4; }
+  .cu-contact-section .n-chk {
+    display: inline-block; }
+    .cu-contact-section .n-chk label {
+      color: #bfc9d4; }
+  .cu-contact-section .cu-section-header p {
+    color: #bfc9d4;
+    font-size: 15px; }
+  .cu-contact-section .contact-form form h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fff; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .cu-contact-section .contact-form form {

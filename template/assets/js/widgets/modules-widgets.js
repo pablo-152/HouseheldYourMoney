@@ -1,8 +1,5 @@
 try {
 
-  Apex.tooltip = {
-    theme: 'dark'
-  }
 
   /*
       ==============================
@@ -20,199 +17,141 @@ try {
   // Total Visits
 
   var spark1 = {
-    chart: {
-        id: 'unique-visits',
-        group: 'sparks2',
+      chart: {
+          id: 'unique-visits',
+          group: 'sparks2',
+          type: 'line',
+          height: 58,
+          sparkline: {
+              enabled: true
+          },
+          dropShadow: {
+            enabled: true,
+            top: 3,
+            left: 1,
+            blur: 3,
+            color: '#009688',
+            opacity: 0.7,
+          }
+      },
+      series: [{
+          data: [21, 9, 36, 12, 44, 25, 59, 41, 66, 25]
+      }],
+      stroke: {
+        curve: 'smooth',
+        width: 2,
+      },
+      markers: {
+          size: 0
+      },
+      grid: {
+        padding: {
+          top: 0,
+          bottom: 0,
+          left: 0
+        }
+      },
+      colors: ['#009688'],
+      tooltip: {
+          x: {
+              show: false
+          },
+          y: {
+              title: {
+                  formatter: function formatter(val) {
+                      return '';
+                  }
+              }
+          }
+      },
+      responsive: [
+      {
+          breakpoint: 576,
+          options: {
+             chart: {
+                height: 95,
+            },
+            grid: {
+                padding: {
+                  top: 45,
+                  bottom: 0,
+                  left: 0
+                }
+            },
+          },
+      }
+
+      ]
+  }
+
+  // Paid Visits
+
+  var spark2 = {
+      chart: {
+        id: 'total-users',
+        group: 'sparks1',
         type: 'line',
-        height: 80,
+        height: 58,
         sparkline: {
-            enabled: true
+          enabled: true
         },
         dropShadow: {
-            enabled: true,
-            top: 1,
-            left: 1,
-            blur: 2,
-            color: '#e2a03f',
-            opacity: 0.7,
-        }
-    },
-    series: [{
-        data: [21, 9, 36, 12, 44, 25, 59, 41, 66, 25]
-    }],
-    stroke: {
-      curve: 'smooth',
-      width: 2,
-    },
-    markers: {
-        size: 0
-    },
-    grid: {
-      padding: {
-        top: 35,
-        bottom: 0,
-        left: 40
+          enabled: true,
+          top: 1,
+          left: 1,
+          blur: 2,
+          color: '#e2a03f',
+          opacity: 0.7,
       }
-    },
-    colors: ['#e2a03f'],
-    tooltip: {
+      },
+      series: [{
+        data: [22, 19, 30, 47, 32, 44, 34, 55, 41, 69]
+      }],
+      stroke: {
+        curve: 'smooth',
+        width: 2,
+      },
+      markers: {
+        size: 0
+      },
+      grid: {
+        padding: {
+          top: 0,
+          bottom: 0,
+          left: 0
+        }
+      },
+      colors: ['#e2a03f'],
+      tooltip: {
         x: {
-            show: false
+          show: false
         },
         y: {
-            title: {
-                formatter: function formatter(val) {
-                    return '';
-                }
+          title: {
+            formatter: function formatter(val) {
+              return '';
             }
-        }
-    },
-    responsive: [{
-        breakpoint: 1351,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 1200,
-        options: {
-           chart: {
-              height: 80,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 40
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 576,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 45,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    }
-
-    ]
-}
-
-// Paid Visits
-
-var spark2 = {
-    chart: {
-      id: 'total-users',
-      group: 'sparks1',
-      type: 'line',
-      height: 80,
-      sparkline: {
-        enabled: true
-      },
-      dropShadow: {
-        enabled: true,
-        top: 3,
-        left: 1,
-        blur: 3,
-        color: '#009688',
-        opacity: 0.7,
-      }
-    },
-    series: [{
-      data: [22, 19, 30, 47, 32, 44, 34, 55, 41, 69]
-    }],
-    stroke: {
-      curve: 'smooth',
-      width: 2,
-    },
-    markers: {
-      size: 0
-    },
-    grid: {
-      padding: {
-        top: 35,
-        bottom: 0,
-        left: 40
-      }
-    },
-    colors: ['#009688'],
-    tooltip: {
-      x: {
-        show: false
-      },
-      y: {
-        title: {
-          formatter: function formatter(val) {
-            return '';
           }
         }
+      },
+      responsive: [
+      {
+          breakpoint: 576,
+          options: {
+             chart: {
+                height: 95,
+            },
+            grid: {
+                padding: {
+                  top: 35,
+                  bottom: 0,
+                  left: 0
+                }
+            },
+          },
       }
-    },
-    responsive: [{
-        breakpoint: 1351,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 1200,
-        options: {
-           chart: {
-              height: 80,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 40
-              }
-          },
-        },
-    },
-    {
-        breakpoint: 576,
-        options: {
-           chart: {
-              height: 95,
-          },
-          grid: {
-              padding: {
-                top: 35,
-                bottom: 0,
-                left: 0
-              }
-          },
-        },
-    }
-    ]
-}
+      ]
+  }
   
 
   /*
@@ -221,88 +160,73 @@ var spark2 = {
       ===================================
   */
 
-  var d_1options1 = {
-    chart: {
-        height: 350,
-        type: 'bar',
-        toolbar: {
-          show: false,
-        },
-        dropShadow: {
-            enabled: true,
-            top: 1,
-            left: 1,
-            blur: 1,
-            color: '#515365',
-            opacity: 0.3,
-        }
-    },
-    colors: ['#5c1ac3', '#ffbb44'],
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'  
-        },
-    },
-    dataLabels: {
-        enabled: false
-    },
-    legend: {
-          position: 'bottom',
-          horizontalAlign: 'center',
-          fontSize: '14px',
-          markers: {
-            width: 10,
-            height: 10,
-          },
-          itemMargin: {
-            horizontal: 0,
-            vertical: 8
+    var d_1options1 = {
+      chart: {
+          height: 350,
+          type: 'bar',
+          toolbar: {
+            show: false,
           }
-    },
-    grid: {
-      borderColor: '#191e3a',
-    },
-    stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-    },
-    series: [{
-        name: 'Direct',
-        data: [58, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
-    }, {
+      },
+      colors: ['#5c1ac3', '#d6b007'],
+      plotOptions: {
+          bar: {
+              horizontal: false,
+              columnWidth: '55%',
+              endingShape: 'rounded'  
+          },
+      },
+      dataLabels: {
+          enabled: false
+      },
+      legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            fontSize: '14px',
+            markers: {
+              width: 10,
+              height: 10,
+            },
+            itemMargin: {
+              horizontal: 0,
+              vertical: 8
+            }
+      },
+      stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+      },
+      series: [{
+          name: 'Direct',
+          data: [58, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
+      }, {
         name: 'Organic',
         data: [91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
-    }],
-    xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        crosshairs: {
-          show: false
+      }],
+      xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      },
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'light',
+          type: 'vertical',
+          shadeIntensity: 0.3,
+          inverseColors: false,
+          opacityFrom: 1,
+          opacityTo: 0.8,
+          stops: [0, 100]
         }
-    },
-    fill: {
-      type: 'gradient',
-      gradient: {
-        shade: 'dark',
-        type: 'vertical',
-        shadeIntensity: 0.3,
-        inverseColors: false,
-        opacityFrom: 1,
-        opacityTo: 0.8,
-        stops: [0, 100]
+      },
+      tooltip: {
+          y: {
+              formatter: function (val) {
+                  return val
+              }
+          }
       }
-    },
-    tooltip: {
-      theme: 'dark',
-        y: {
-            formatter: function (val) {
-                return val
-            }
-        }
     }
-  }
 
   /*
       ==============================
@@ -339,17 +263,6 @@ var spark2 = {
         show: false,
       }
     },
-    fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
-      }
-    }
   }
 
   // Referral
@@ -379,17 +292,6 @@ var spark2 = {
     tooltip: {
       x: {
         show: false,
-      }
-    },
-    fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
       }
     }
   }
@@ -425,21 +327,11 @@ var spark2 = {
       x: {
         show: false,
       }
-    },
-    fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
-      }
     }
   }
 
   
+
 
   /*
       ==============================
@@ -503,7 +395,7 @@ var spark2 = {
         Perfect Scrollbar | Notifications
     =============================================
 */
-const mtContainer = new PerfectScrollbar(document.querySelector('.mt-container'));
+const ps = new PerfectScrollbar(document.querySelector('.mt-container'));
 
 
 } catch(e) {
@@ -515,11 +407,6 @@ console.log(e);
 
 
 try {
-
-
-  Apex.tooltip = {
-    theme: 'dark'
-  }
 
   /*
       ==============================
@@ -536,8 +423,8 @@ try {
         chart: {
               height: 160,
               type: 'bar',
-              stackType: '100%',
               stacked: true,
+              stackType: '100%',
               toolbar: {
                 show: false,
               }
@@ -549,6 +436,7 @@ try {
               show: true,
               width: 1,
           },
+          // colors: ['#2090f8', '#e0e6ed'],
           colors: ['#e2a03f', '#e0e6ed'],
           responsive: [{
               breakpoint: 480,
@@ -572,9 +460,6 @@ try {
                   show: false,
               },
               categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
-              crosshairs: {
-                show: false
-              }
           },
           yaxis: {
               show: false
@@ -612,13 +497,13 @@ try {
       =============================
           Total Orders | Options
       =============================
-  */
+  */ 
   var d_2options2 = {
     chart: {
       id: 'sparkline1',
       group: 'sparklines',
       type: 'area',
-      height: 315,
+      height: 290,
       sparkline: {
         enabled: true
       },
@@ -628,15 +513,7 @@ try {
         width: 2
     },
     fill: {
-      type:"gradient",
-      gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: !1,
-          opacityFrom: .30,
-          opacityTo: .05,
-          stops: [100, 100]
-      }
+      opacity: 1,
     },
     series: [{
       name: 'Sales',
@@ -660,8 +537,9 @@ try {
       },
       theme: 'dark'
     },
-    colors: ['#805dca']
+    colors: ['#1abc9c']
   }
+
   
   /*
       =================================
@@ -700,7 +578,7 @@ try {
               }
             },
             customSVG: {
-                SVG: '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#2196f3" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg>',
+                SVG: '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="#1b55e2" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg>',
                 cssClass: undefined,
                 offsetX: -8,
                 offsetY: 5
@@ -725,7 +603,7 @@ try {
         },
       }
     },
-    colors: ['#2196f3', '#e7515a'],
+    colors: ['#1b55e2', '#e7515a'],
     dataLabels: {
         enabled: false
     },
@@ -765,7 +643,7 @@ try {
       floating: false,
       style: {
         fontSize: '18px',
-        color:  '#bfc9d4'
+        color:  '#0e1726'
       },
     },
     stroke: {
@@ -817,7 +695,7 @@ try {
       }
     },
     grid: {
-      borderColor: '#191e3a',
+      borderColor: '#e0e6ed',
       strokeDashArray: 5,
       xaxis: {
           lines: {
@@ -841,7 +719,7 @@ try {
       horizontalAlign: 'right',
       offsetY: -50,
       fontSize: '16px',
-      fontFamily: 'Quicksand, sans-serif',
+      fontFamily: 'Nunito, sans-serif',
       markers: {
         width: 10,
         height: 10,
@@ -873,9 +751,9 @@ try {
             type: "vertical",
             shadeIntensity: 1,
             inverseColors: !1,
-            opacityFrom: .19,
+            opacityFrom: .28,
             opacityTo: .05,
-            stops: [100, 100]
+            stops: [45, 100]
         }
     },
     responsive: [{
@@ -893,106 +771,105 @@ try {
           Sales By Category | Options
       ==================================
   */
+
   var options = {
-      chart: {
-          type: 'donut',
-          width: 397
-      },
-      colors: ['#5c1ac3', '#e2a03f', '#e7515a', '#e2a03f'],
-      dataLabels: {
-        enabled: false
-      },
-      legend: {
-          position: 'bottom',
-          horizontalAlign: 'center',
-          fontSize: '14px',
-          markers: {
-            width: 10,
-            height: 10,
-          },
-          itemMargin: {
-            horizontal: 0,
-            vertical: 8
-          }
-      },
-      plotOptions: {
-        pie: {
-          donut: {
-            size: '65%',
-            background: 'transparent',
-            labels: {
-              show: true,
-              name: {
+        chart: {
+            type: 'donut',
+            width: 380
+        },
+        colors: ['#5c1ac3', '#e2a03f', '#e7515a', '#e2a03f'],
+        dataLabels: {
+          enabled: false
+        },
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            fontSize: '14px',
+            markers: {
+              width: 10,
+              height: 10,
+            },
+            itemMargin: {
+              horizontal: 0,
+              vertical: 8
+            }
+        },
+        plotOptions: {
+          pie: {
+            donut: {
+              size: '65%',
+              background: 'transparent',
+              labels: {
                 show: true,
-                fontSize: '29px',
-                fontFamily: 'Nunito, sans-serif',
-                color: undefined,
-                offsetY: -10
-              },
-              value: {
-                show: true,
-                fontSize: '26px',
-                fontFamily: 'Nunito, sans-serif',
-                color: '#bfc9d4',
-                offsetY: 16,
-                formatter: function (val) {
-                  return val
-                }
-              },
-              total: {
-                show: true,
-                showAlways: true,
-                label: 'Total',
-                color: '#888ea8',
-                formatter: function (w) {
-                  return w.globals.seriesTotals.reduce( function(a, b) {
-                    return a + b
-                  }, 0)
+                name: {
+                  show: true,
+                  fontSize: '29px',
+                  fontFamily: 'Nunito, sans-serif',
+                  color: undefined,
+                  offsetY: -10
+                },
+                value: {
+                  show: true,
+                  fontSize: '26px',
+                  fontFamily: 'Nunito, sans-serif',
+                  color: '20',
+                  offsetY: 16,
+                  formatter: function (val) {
+                    return val
+                  }
+                },
+                total: {
+                  show: true,
+                  showAlways: true,
+                  label: 'Total',
+                  color: '#888ea8',
+                  formatter: function (w) {
+                    return w.globals.seriesTotals.reduce( function(a, b) {
+                      return a + b
+                    }, 0)
+                  }
                 }
               }
             }
           }
-        }
-      },
-      stroke: {
-        show: true,
-        width: 25,
-        colors: '#0e1726'
-      },
-      series: [985, 737, 270],
-      labels: ['Apparel', 'Sports', 'Others'],
-      responsive: [{
-          breakpoint: 1599,
-          options: {
-              chart: {
-                  width: '350px',
-                  height: '400px'
-              },
-              legend: {
-                  position: 'bottom'
-              }
-          },
-  
-          breakpoint: 1439,
-          options: {
-              chart: {
-                  width: '250px',
-                  height: '390px'
-              },
-              legend: {
-                  position: 'bottom'
-              },
-              plotOptions: {
-                pie: {
-                  donut: {
-                    size: '65%',
+        },
+        stroke: {
+          show: true,
+          width: 25,
+        },
+        series: [985, 737, 270],
+        labels: ['Apparel', 'Sports', 'Others'],
+        responsive: [{
+            breakpoint: 1599,
+            options: {
+                chart: {
+                    width: '350px',
+                    height: '400px'
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            },
+    
+            breakpoint: 1439,
+            options: {
+                chart: {
+                    width: '250px',
+                    height: '390px'
+                },
+                legend: {
+                    position: 'bottom'
+                },
+                plotOptions: {
+                  pie: {
+                    donut: {
+                      size: '65%',
+                    }
                   }
                 }
-              }
-          },
-      }]
+            },
+        }]
   }
-  
   
   /*
       ==============================
@@ -1046,7 +923,7 @@ try {
           Perfect Scrollbar | Recent Activities
       =============================================
   */
-  const ps = new PerfectScrollbar(document.querySelector('.mt-container-ra'));
+ $('.mt-container').each(function(){ const ps = new PerfectScrollbar($(this)[0]); });
   
   const topSellingProduct = new PerfectScrollbar('.widget-table-three .table-scroll table', {
     wheelSpeed:.5,
@@ -1056,7 +933,7 @@ try {
     suppressScrollY: true
   
   });
-  
-  } catch(e) {
-      console.log(e);
-  }
+
+} catch(e) {
+    console.log(e);
+}

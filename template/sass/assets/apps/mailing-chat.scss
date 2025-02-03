@@ -4,10 +4,6 @@
 
 @import '../../base/base';    // Base Variables
 
-.layout-px-spacing {
-  min-height: auto !important;
-}
-
 .wrapper {
   position: relative;
   left: 50%;
@@ -21,11 +17,11 @@
 
 .chat-system {
   display: flex;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 6px 0 rgba(85, 85, 85, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.07), 0px 1px 11px 0px rgba(0, 0, 0, 0.07);
   height: calc(100vh - 179px);
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
 
   .hamburger {
     display: none;
@@ -34,9 +30,9 @@
   .user-list-box {
     width: 30%;
     max-width: 400px;
-    border-right: 1px solid #191e3a;
+    border-right: 1px solid $m-color_2;
     border-bottom-left-radius: 6px;
-    background: #0e1726;
+    background: #fff;
     border-top-left-radius: 6px;
 
     .search {
@@ -48,7 +44,7 @@
         content: "\f169";
         position: absolute;
         left: 11px;
-        color: #e3e4eb;
+        color: $m-color_4;
         top: 25px;
         left: 30px;
       }
@@ -59,14 +55,13 @@
       padding-left: 38px;
       font-size: 16px;
       width: 100%;
-      color: #25d5e4;
+      color: $dark;
       border: 0;
       outline: none;
       padding: 12px 16px 12px 43px;
-      background: #191e3a;
+      background: $m-color_1;
       margin: 0 20px 0 20px;
-      border: 1px dashed #3b3f5c;
-      box-shadow: none;
+      border: 1px dashed $m-color_6;
     }
 
     .people {
@@ -83,7 +78,7 @@
         width: 100%;
         padding: 20px 20px;
         cursor: pointer;
-        border-bottom: 1px solid #191e3a;
+        border-bottom: 1px solid $m-color_3;
 
         &.border-none {
           border-bottom: none;
@@ -109,7 +104,8 @@
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
         border-radius: 50%;
-        border: 2px solid #3b3f5c;
+        border: 2px solid $m-color_5;
+        box-shadow: 0px 0px 14px 3px rgba(126, 142, 177, 0.24);
       }
 
       .f-body {
@@ -118,7 +114,7 @@
         .meta-info {
           .user-name {
             font-size: 14px;
-            color: #bfc9d4;
+            color: $dark;
             font-weight: 700;
           }
 
@@ -127,7 +123,7 @@
             position: absolute;
             top: 16px;
             right: 11px;
-            color: #888ea8;
+            color: $m-color_6;
             font-weight: 700;
             float: right;
           }
@@ -140,15 +136,21 @@
           width: 70%;
           white-space: nowrap;
           text-overflow: ellipsis;
-          color: #888ea8;
+          color: $m-color_6;
           font-weight: 600;
         }
       }
     }
 
-    &:hover .user-info .f-body .meta-info {
-      .user-name, .user-meta-time {
-        color: #25d5e4;
+    &:hover .user-info {
+      .f-head img {
+        box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
+      }
+
+      .f-body .meta-info {
+        .user-name, .user-meta-time {
+          color: $primary;
+        }
       }
     }
 
@@ -174,19 +176,18 @@
       p {
         align-self: center;
         font-size: 18px;
-        color: #e0e6ed;
+        color: $dark;
         margin-bottom: 0;
         font-weight: 600;
-        background: #0e1726;
+        background: $m-color_4;
         padding: 7px 20px;
         border-radius: 6px;
-        -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+        box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
 
         svg {
           vertical-align: middle;
-          color: #888ea8;
+          color: $m-color_6;
         }
       }
     }
@@ -197,6 +198,7 @@
         z-index: 4;
       }
 
+      display: none;
       position: absolute;
       width: 100%;
       height: calc(100vh - 179px);
@@ -246,7 +248,7 @@
 
           img {
             border-radius: 50%;
-            border: 4px solid #ebedf2;
+            border: 4px solid $m-color_2;
           }
 
           .timer {
@@ -303,7 +305,7 @@
             }
 
             &.cancel-call {
-              background-color: #e7515a;
+              background-color: $danger;
             }
           }
         }
@@ -316,6 +318,7 @@
         z-index: 4;
       }
 
+      display: none;
       position: absolute;
       width: 100%;
       height: calc(100vh - 179px);
@@ -391,7 +394,7 @@
 
           img {
             border-radius: 50%;
-            border: 4px solid #ebedf2;
+            border: 4px solid $m-color_2;
           }
         }
 
@@ -441,7 +444,7 @@
             &.add-more-caller {}
 
             &.cancel-call {
-              background-color: #e7515a;
+              background-color: $danger;
 
               &:hover {}
             }
@@ -460,11 +463,8 @@
           display: flex;
           width: 100%;
           justify-content: space-between;
-          background-color: #0e1726;
+          background-color: $m-color_20;
           border-top-right-radius: 6px;
-          -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-          -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
         }
 
         .current-chat-user-name {
@@ -472,7 +472,7 @@
 
           span {
             font-size: 15px;
-            color: #888ea8;
+            color: $m-color_6;
 
             img {
               width: 45px;
@@ -486,7 +486,7 @@
             }
 
             .name {
-              color: #bfc9d4;
+              color: $m-color_10;
               font-weight: 600;
             }
           }
@@ -495,15 +495,16 @@
         &.chat-active .chat-action-btn {
           svg {
             cursor: pointer;
-            color: #888ea8;
+            color: $m-color_6;
             margin-right: 6px;
             vertical-align: middle;
             width: 20px;
             height: 20px;
             fill: rgba(0, 23, 55, 0.08);
+            stroke-width: 1.6;
 
             &:hover {
-              color: #25d5e4;
+              color: $primary;
               fill: rgba(27, 85, 226, 0.2392156863);
             }
 
@@ -513,12 +514,9 @@
           }
 
           .dropdown-menu {
-            -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-            -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: rgba(113, 106, 202, 0.2) 0px 0px 15px 1px;
             top: 15px !important;
             padding: 10px;
-            background: #060818;
             border-width: initial;
             border-style: none;
             border-color: initial;
@@ -531,15 +529,11 @@
             a {
               font-size: 12px;
               font-weight: 700;
-              color: #888ea8;
+              color: $m-color_6;
               padding: 11px 8px;
 
-              &:hover {
-                background-color: #191e3a;
-              }
-
               svg {
-                color: #888ea8;
+                color: $m-color_6;
                 margin-right: 6px;
                 vertical-align: middle;
                 width: 20px;
@@ -554,7 +548,7 @@
               }
 
               &:hover svg {
-                color: #25d5e4;
+                color: $primary;
                 fill: rgba(27, 85, 226, 0.2392156863);
               }
             }
@@ -663,11 +657,8 @@
       &.chat-active {
         display: block;
         padding: 6px 10px;
-        background: #0e1726;
+        background: $m-color_20;
         border-bottom-right-radius: 6px;
-        -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.14), 0 -1px 18px 0 rgba(0, 0, 0, 0.12), 0 -3px 5px -1px rgba(0, 0, 0, 0.2);
       }
     }
 
@@ -678,22 +669,42 @@
     .chat-input {
       svg {
         position: absolute;
-        color: #888ea8;
+        color: $m-color_6;
         left: 11px;
         top: 12px;
         fill: rgba(0, 23, 55, 0.08);
+        stroke-width: 1.6;
       }
 
       input {
         font-size: 16px;
         width: 100%;
-        color: #25d5e4;
+        color: $dark;
         border: 0;
         outline: none;
         padding: 12px 16px 12px 43px;
-        border: 1px dashed #3b3f5c;
-        background: #0e1726;
-        box-shadow: none;
+        border: 1px dashed $m-color_6;
+        background: $m-color_20;
+
+        &::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: $m-color_6;
+        }
+
+        &::-moz-placeholder {
+          /* Firefox 19+ */
+          color: $m-color_6;
+        }
+
+        &:-ms-input-placeholder {
+          /* IE 10+ */
+          color: $m-color_6;
+        }
+
+        &:-moz-placeholder {
+          /* Firefox 18- */
+          color: $m-color_6;
+        }
       }
     }
 
@@ -726,39 +737,37 @@
 
       &.you {
         float: left;
-        color: #e0e6ed;
-        background-color: #0e1726;
+        color: $primary;
+        background-color: #f6f6f6;
         -webkit-align-self: flex-start;
         align-self: flex-start;
         -moz-animation-name: slideFromLeft;
         -webkit-animation-name: slideFromLeft;
         animation-name: slideFromLeft;
-        -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+        box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
 
         &:before {
           left: -3px;
-          background-color: #0e1726;
+          background-color: #fff;
         }
       }
 
       &.me {
         float: right;
         color: #fff;
-        background-color: #4361ee;
+        background-color: $primary;
         -webkit-align-self: flex-end;
         align-self: flex-end;
         -moz-animation-name: slideFromRight;
         -webkit-animation-name: slideFromRight;
         animation-name: slideFromRight;
-        -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+        box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
 
         &:before {
           right: -3px;
-          background-color: #4361ee;
+          background-color: $primary;
         }
       }
     }
@@ -771,15 +780,14 @@
 
       span {
         font-size: 12px;
-        color: #e0e6ed;
+        color: $dark;
         margin-bottom: 0;
         font-weight: 700;
-        background: #0e1726;
+        background: #fff;
         padding: 7px 20px;
         border-radius: 6px;
-        -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
+        box-shadow: 0px 2px 4px rgba(126, 142, 177, 0.12);
       }
     }
   }
@@ -895,7 +903,7 @@
       right: 9px;
       display: block;
       z-index: 78;
-      background-color: #515365;
+      background-color: $m-color_9;
       border-radius: 50%;
     }
 

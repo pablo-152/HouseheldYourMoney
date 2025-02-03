@@ -4,6 +4,7 @@
 
 @import '../../base/base';    // Base Variables
 
+
 /*----------Theme checkbox---------*/
 
 .new-control {
@@ -35,24 +36,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: $m-color_9;
+    background-color: $m-color_3;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
     border-radius: 4px;
   }
 
-  > input.new-control-input:disabled ~ span.new-control-indicator {
-    opacity: 0.6;
-    background-color: $m-color_3;
-    border: 1px solid $m-color_4;
-  }
-
   cursor: pointer;
-
-  &.disabled {
-    cursor: default;
-  }
 
   > input:checked ~ span.new-control-indicator {
     background: $m-color_6;
@@ -63,7 +54,7 @@
   }
 
   span.new-control-indicator:after {
-    border: solid #fff;
+    border: solid $white;
     top: 50%;
     left: 50%;
     margin-left: -2px;
@@ -237,24 +228,14 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      background-color: $m-color_9;
+      background-color: $m-color_3;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 50% 50%;
       border-radius: 50%;
     }
 
-    > input.new-control-input:disabled ~ span.new-control-indicator {
-      opacity: 0.6;
-      background-color: $m-color_3;
-      border: 1px solid $m-color_4;
-    }
-
     cursor: pointer;
-
-    &.disabled {
-      cursor: default;
-    }
 
     > input:checked ~ span.new-control-indicator {
       background: $m-color_6;
@@ -271,7 +252,7 @@
       border-radius: 50%;
       height: 6px;
       width: 6px;
-      background-color: #fff;
+      background-color: $white;
     }
 
     &.square-radio {

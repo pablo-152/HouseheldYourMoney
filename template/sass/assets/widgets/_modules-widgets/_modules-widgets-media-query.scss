@@ -4,15 +4,21 @@
     =====================
 */
 
-@media (max-width: 1199px) {
-  .widget-activity-five .mt-container {
-    height: 205px;
+@media (max-width: 1249px) {
+  .widget-five {
+    .widget-content .meta-info .avatar {
+      &.more-group {
+        margin-right: -6px;
+      }
+
+      margin-left: -4px;
+    }
+
+    &:hover .widget-content .meta-info .avatar.more-group {
+      margin-right: 6px;
+    }
   }
 }
-
-
-
-
 
 
 
@@ -21,7 +27,7 @@
         Media Object
     ====================
 */
-@media (max-width: 1299px) and (min-width: 1200px) {
+@media (max-width: 1359px) and (min-width: 1200px) {
   /*
       ===========================
           Top Selling Product
@@ -46,12 +52,6 @@
       font-size: 12px;
       padding: 5px 6px;
     }
-  }
-}
-
-@media (max-width: 1199px) {
-  .widget-activity-four .mt-container-ra {
-    height: 184px;
   }
 }
 
@@ -114,5 +114,11 @@
       padding-right: 12px;
       padding-left: 12px;
     }
+  }
+}
+
+@media (max-width: 1199px) {
+  .widget-activity-five .mt-container {
+    height: 205px;
   }
 }

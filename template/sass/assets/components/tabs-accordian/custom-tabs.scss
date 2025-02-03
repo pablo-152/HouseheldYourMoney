@@ -7,7 +7,6 @@
 .nav-tabs .dropdown:not(.custom-dropdown-icon):not(.custom-dropdown) .dropdown-menu.show, .nav-pills .dropdown:not(.custom-dropdown-icon):not(.custom-dropdown) .dropdown-menu.show {
   top: 36px !important;
 }
-
 .nav-tabs {
   svg {
     width: 20px;
@@ -17,8 +16,8 @@
   .nav-link {
     &.active {
       color: $m-color_16;
-      background-color: $m-color_18;
-      border-color: $m-color_18 $m-color_18 $m-color_10;
+      background-color: $white;
+      border-color: $m-color_3 $m-color_3 $white;
 
       &:after {
         color: $m-color_16;
@@ -26,7 +25,7 @@
     }
 
     &:hover {
-      border-color: $m-color_18 $m-color_18 $m-color_18;
+      border-color: $m-color_2 $m-color_2 $m-color_1;
     }
   }
 
@@ -58,7 +57,7 @@
       color: $white;
     }
 
-    color: $m-color_6;
+    color: $dark;
   }
 
   .show > .nav-link {
@@ -80,19 +79,18 @@ h4 {
 
 .simple-tab .nav-tabs {
   li a {
-    color: $m-color_6;
+    color: $dark;
   }
 
   .nav-item.show .nav-link, .nav-link.active {
-    color: $m-color_13;
+    color: $primary;
     font-weight: 600;
-    background-color: $m-color_10;
-    border-color: $m-color_18 $m-color_18 $m-color_10;
+    background-color: $white;
   }
 }
 
 .nav-tabs {
-  border-bottom: 1px solid $m-color_18;
+  border-bottom: 1px solid $m-color_3;
 }
 
 .simple-tab .tab-content > .tab-pane {
@@ -106,12 +104,11 @@ h4 {
 .simple-pills {
   .nav-pills {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     .nav-link.active, .show > .nav-link {
-      background-color: $m-color_18;
-      color: $m-color_13;
+      background-color: $primary;
       border-color: transparent;
     }
   }
@@ -128,7 +125,7 @@ h4 {
 .icon-tab {
   .nav-tabs {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     svg {
@@ -138,8 +135,8 @@ h4 {
 
     .nav-item.show .nav-link, .nav-link.active {
       color: $m-color_16;
-      background-color: $m-color_18;
-      border-color: $m-color_18 $m-color_18 $m-color_10;
+      background-color: $white;
+      border-color: $m-color_3 $m-color_3 $white;
     }
   }
 
@@ -155,7 +152,7 @@ h4 {
 .icon-pill {
   .nav-pills {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     svg {
@@ -164,8 +161,7 @@ h4 {
     }
 
     .nav-link.active, .show > .nav-link {
-      background-color: $m-color_18;
-      color: $warning;
+      background-color: $warning;
       border-color: transparent;
     }
   }
@@ -181,7 +177,7 @@ h4 {
 
 .underline-content {
   .nav-tabs {
-    border-bottom: 1px solid $m-color_18;
+    border-bottom: 1px solid $m-color_3;
 
     li a {
       padding-top: 15px;
@@ -196,13 +192,13 @@ h4 {
   .nav-tabs {
     .nav-link.active, .show > .nav-link {
       border-color: transparent;
-      border-bottom: 1px solid $m-color_6;
-      color: $m-color_6;
+      border-bottom: 1px solid $secondary;
+      color: $secondary;
       background-color: transparent;
     }
 
     .nav-link.active:hover, .show > .nav-link:hover, .nav-link.active:focus, .show > .nav-link:focus {
-      border-bottom: 1px solid $m-color_6;
+      border-bottom: 1px solid $secondary;
     }
 
     .nav-link {
@@ -219,7 +215,7 @@ h4 {
 
 .animated-underline-content {
   .nav-tabs {
-    border-bottom: 1px solid $m-color_18;
+    border-bottom: 1px solid $m-color_3;
 
     li a {
       padding-top: 15px;
@@ -235,7 +231,7 @@ h4 {
   .nav-tabs {
     .nav-link.active, .show > .nav-link {
       border-color: transparent;
-      color: $m-color_3;
+      color: $secondary;
     }
 
     .nav-link {
@@ -255,7 +251,7 @@ h4 {
         width: 100%;
         left: 0;
         bottom: 0;
-        background-color: $m-color_3;
+        background-color: $secondary;
         -webkit-transform: scale(0);
         transform: scale(0);
         transition: all .3s;
@@ -271,13 +267,13 @@ h4 {
 .justify-tab {
   .nav-tabs {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     .nav-item.show .nav-link, .nav-link.active {
-      color: $m-color_13;
-      background-color: $m-color_18;
-      border-color: $m-color_18 $m-color_18 $m-color_10;
+      color: $primary;
+      background-color: $white;
+      border-color: $m-color_3 $m-color_3 $white;
     }
   }
 
@@ -293,12 +289,11 @@ h4 {
 .justify-pill {
   .nav-pills {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     .nav-link.active, .show > .nav-link {
-      background-color: $m-color_18;
-      color: $info;
+      background-color: $info;
       border-color: transparent;
     }
   }
@@ -315,13 +310,13 @@ h4 {
 .tab-justify-centered {
   .nav-tabs {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     .nav-item.show .nav-link, .nav-link.active {
       color: $m-color_16;
-      background-color: $m-color_18;
-      border-color: $m-color_18 $m-color_18 $m-color_10;
+      background-color: $white;
+      border-color: $m-color_3 $m-color_3 $white;
     }
   }
 
@@ -337,12 +332,11 @@ h4 {
 .pill-justify-centered {
   .nav-pills {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     .nav-link.active, .show > .nav-link {
-      background-color: $m-color_18;
-      color: $warning;
+      background-color: $warning;
     }
   }
 
@@ -358,13 +352,13 @@ h4 {
 .tab-justify-right {
   .nav-tabs {
     li a {
-      color: $m-color_6;
+      color: $dark;
     }
 
     .nav-item.show .nav-link, .nav-link.active {
-      color: $m-color_13;
-      background-color: $m-color_18;
-      border-color: $m-color_18 $m-color_18 $m-color_10;
+      color: $primary;
+      background-color: $white;
+      border-color: $m-color_3 $m-color_3 $white;
     }
   }
 
@@ -380,8 +374,7 @@ h4 {
 .pill-justify-right {
   .nav-pills {
     .nav-link.active, .show > .nav-link {
-      background-color: $m-color_18;
-      color: $info;
+      background-color: $info;
     }
   }
 
@@ -402,7 +395,7 @@ h4 {
       -ms-border-radius: 0.625rem !important;
       -o-border-radius: 0.625rem !important;
       border-radius: 0.625rem !important;
-      background-color: $m-color_18;
+      background-color: $m-color_1;
       width: 100px;
       padding: 8px;
 
@@ -438,7 +431,8 @@ h4 {
     -ms-border-radius: 0.625rem !important;
     -o-border-radius: 0.625rem !important;
     border-radius: 0.625rem !important;
-    background-color: $m-color_18;
+    background-color: #ffffff;
+    border: solid 1px #e4e2e2;
     padding: 11px 23px;
     text-align: center;
     width: 100px;
@@ -468,7 +462,7 @@ h4 {
 .rounded-circle-pills-icon {
   .nav-pills {
     li a {
-      background-color: $m-color_18;
+      background-color: $m-color_1;
       padding: 20px 20px;
 
       svg {
@@ -494,7 +488,8 @@ h4 {
 
 .rounded-circle-vertical-pills-icon .nav-pills {
   a {
-    background-color: $m-color_18;
+    background-color: #ffffff;
+    border: solid 1px #e4e2e2;
     border-radius: 50%;
     height: 58px;
     width: 60px;
@@ -544,7 +539,7 @@ h4 {
   .nav-pills {
     border-bottom: 1px solid transparent;
     width: 92px;
-    border-right: 1px solid $m-color_18;
+    border-right: 1px solid $m-color_3;
 
     a {
       padding-top: 15px;
@@ -559,7 +554,7 @@ h4 {
         position: relative;
         background-color: transparent;
         border-color: transparent;
-        color: $m-color_3;
+        color: $secondary;
         font-weight: 600;
       }
     }
@@ -568,7 +563,7 @@ h4 {
       position: relative;
       background-color: transparent;
       border-color: transparent;
-      color: $m-color_3;
+      color: $secondary;
       font-weight: 600;
     }
 
@@ -589,7 +584,7 @@ h4 {
         position: absolute;
         width: 1px;
         right: -1px;
-        background-color: $m-color_3;
+        background-color: $secondary;
         -webkit-transform: scale(0);
         transform: scale(0);
         transition: all .3s;
@@ -610,7 +605,7 @@ h4 {
 
 .media img {
   border-radius: 50%;
-  border: solid 5px $m-color_18;
+  border: solid 5px $m-color_2;
   width: 80px;
   height: 80px;
 }
@@ -620,7 +615,7 @@ h4 {
 */
 
 .border-tab .tab-content {
-  border: 1px solid $m-color_18;
+  border: 1px solid $m-color_3;
   border-top: none;
   padding: 10px;
 
@@ -648,25 +643,25 @@ h4 {
 
   .nav-link {
     padding: .5rem 0;
-    border: 1px solid $m-color_18;
+    border: 1px solid $m-color_3;
     border-radius: 0;
     border-bottom: none;
 
     &:last-child {
-      border-bottom: 1px solid $m-color_18;
+      border-bottom: 1px solid $m-color_3;
     }
 
     &.active {
       position: relative;
-      color: $success;
-      background-color: $m-color_18;
+      color: $white;
+      background-color: $success;
     }
   }
 
   .show > .nav-link {
     position: relative;
-    color: $success;
-    background-color: $m-color_18;
+    color: $white;
+    background-color: $success;
   }
 }
 
@@ -681,7 +676,8 @@ h4 {
     li a {
       border-radius: 0px;
       padding: 12px 30px;
-      color: $m-color_6;
+      background: #f6f7f8;
+      color: $m-color_10;
       border-right: 1px solid transparent;
     }
   }
@@ -695,10 +691,10 @@ h4 {
       color: #495057;
       border-radius: 0px;
       padding: 12px 30px;
-      background: $m-color_18;
-      color: $m-color_3;
+      background: #f6f7f8;
+      color: $secondary;
       border: 1px solid transparent;
-      border-top: 2px solid $m-color_3;
+      border-top: 2px solid $secondary;
     }
 
     .nav-link {
@@ -706,15 +702,15 @@ h4 {
         color: #495057;
         border-radius: 0px;
         padding: 12px 30px;
-        background: $m-color_18;
-        color: $m-color_3;
+        background: #f6f7f8;
+        color: $secondary;
         border: 1px solid transparent;
-        border-top: 2px solid $m-color_3;
+        border-top: 2px solid $secondary;
       }
 
       &:focus, &:hover {
         border: 1px solid transparent;
-        border-top: 2px solid $m-color_3;
+        border-top: 2px solid $secondary;
       }
     }
   }

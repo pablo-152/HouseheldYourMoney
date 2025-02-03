@@ -4,6 +4,7 @@
 
 @import '../../base/base';    // Base Variables
 
+
 /*      Map     */
 
 #basic_map1 {
@@ -19,13 +20,13 @@
     margin-bottom: 50px;
 
     h4 {
-      color: #fff;
+      color: $m-color_10;
       font-size: 34px;
       font-weight: 600;
     }
 
     p {
-      color: #fff;
+      color: $m-color_7;
       font-size: 15px;
     }
   }
@@ -55,7 +56,7 @@
         svg {
           position: absolute;
           top: 11px;
-          color: $m-color_14;
+          color: $primary;
           width: 20px;
           left: 25px;
 
@@ -70,7 +71,7 @@
         font-size: 22px;
         font-weight: 600;
         margin-bottom: 25px;
-        color: #fff;
+        color: $m-color_10;
       }
 
       input {
@@ -78,30 +79,34 @@
         background-color: transparent;
 
         &::-webkit-input-placeholder, &::-ms-input-placeholder, &::-moz-placeholder {
-          color: $m-color_5;
+          color: $m-color_6;
           font-size: 14px;
         }
 
         box-shadow: none;
-        color: #fff;
+        color: $m-color_10;
         font-weight: 400;
       }
     }
   }
 
   p {
-    color: #fff;
+    color: $m-color_10;
   }
 
   .n-chk {
     display: inline-block;
+
+    label {
+      color: $m-color_10;
+    }
   }
 }
 
 /* 	Contact Content 	*/
 
 .new-control.new-radio.radio-success > input:checked ~ span.new-control-indicator {
-  background: $m-color_14 !important;
+  background: $primary !important;
 }
 
 .cu-contact-section {
@@ -111,11 +116,11 @@
     resize: none;
 
     &::-webkit-input-placeholder, &::-ms-input-placeholder, &::-moz-placeholder {
-      color: $m-color_5;
+      color: $m-color_6;
       font-size: 14px;
     }
 
-    color: #fff;
+    color: $m-color_10;
     font-weight: 400;
 
     &:-ms-input-placeholder {
@@ -128,7 +133,7 @@
     padding: 15px 25px;
     display: block;
     width: 100%;
-    background-color: $m-color_14 !important;
+    background-color: $primary !important;
     box-shadow: none;
   }
 }
@@ -150,7 +155,7 @@
         width: 100%;
         border-radius: 0;
         height: 100%;
-        background-color: rgba(3, 3, 5, 0.42);
+        background-color: rgba(3, 3, 5, 42%);
         background-attachment: fixed;
         background-size: contain;
         -webkit-backdrop-filter: blur(12px);
@@ -180,6 +185,36 @@
       color: #fff;
       font-weight: 400;
       border: none;
+    }
+
+    .contact-form form input {
+      box-shadow: none;
+      color: $m-color_4;
+      font-weight: 400;
+    }
+
+    p {
+      color: $m-color_4;
+    }
+
+    .n-chk {
+      display: inline-block;
+
+      label {
+        color: $m-color_4;
+      }
+    }
+
+    .cu-section-header p {
+      color: $m-color_4;
+      font-size: 15px;
+    }
+
+    .contact-form form h4 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #fff;
     }
   }
 }

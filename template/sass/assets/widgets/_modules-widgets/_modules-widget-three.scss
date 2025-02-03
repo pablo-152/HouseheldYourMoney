@@ -6,15 +6,17 @@
 
 .widget-three {
   position: relative;
-  background: $m-color_10;
+  background: #fff;
   padding: 20px;
   border-radius: 6px;
   height: 100%;
-  border: none;
+
+  border: 1px solid $m-color_3;
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
 
   .widget-heading {
     display: flex;
-    margin-bottom: 25px!important;
+    margin-bottom: 25px;
     justify-content: space-between;
 
     .task-action {
@@ -38,7 +40,18 @@
       padding: 15px;
       background: rgba(224, 230, 237, 40%);
       border-radius: 6px;
-      background-color: $m-color_12;
+
+      &.summary-income {
+        background: rgba(220, 207, 247, 0.34);
+      }
+
+      &.summary-profit {
+        background: rgba(186, 231, 255, 0.34);
+      }
+
+      &.summary-expenses {
+        background: rgba(255, 236, 203, 0.34);
+      }
 
       .summery-info {
         display: flex;
@@ -63,21 +76,24 @@
         display: block;
         width: 22px;
         height: 22px;
-        stroke-width: 1.5px;
+        stroke-width: 1px;
       }
     }
 
     .summary-list {
       &:nth-child(1) .w-icon svg {
-        color: $info;
+        color: $secondary;
+        fill: rgba(92, 26, 195, 0.16);
       }
 
       &:nth-child(2) .w-icon svg {
-        color: $warning;
+        color: $info;
+        fill: rgba(33, 150, 243, 0.16);
       }
 
       &:nth-child(3) .w-icon svg {
-        color: $danger;
+        color: $warning;
+        fill: rgba(226, 160, 63, 0.16);
       }
     }
 
@@ -93,17 +109,17 @@
 
       h6 {
         font-size: 13px;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 0;
-        color: $m-color_3;
+        color: $m-color_6;
       }
 
       .summary-count {
         display: block;
         font-size: 16px;
         margin-top: 4px;
-        font-weight: 500;
-        color: $m-color_4;
+        font-weight: 600;
+        color: $m-color_9;
       }
 
       .summary-average {
@@ -116,15 +132,15 @@
 
     .summary-list {
       &.summary-income .w-summary-info .summary-average {
-        color: $info;
+        color: $secondary;
       }
 
       &.summary-profit .w-summary-info .summary-average {
-        color: $warning;
+        color: $info;
       }
 
       &.summary-expenses .w-summary-info .summary-average {
-        color: $danger;
+        color: $warning;
       }
     }
   }

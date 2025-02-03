@@ -4,11 +4,12 @@
     ==================
 */
 
-.widget-one_hybrid {
+.widget.widget-one_hybrid {
   background: #fff;
-  background: $m-color_10;
-  padding: 0 !important;
+  padding: 0;
+}
 
+.widget-one_hybrid {
   .widget-heading {
     padding: 20px 13px;
 
@@ -51,13 +52,13 @@
   }
 
   &.widget-followers .widget-heading .w-icon {
-    color: $l-primary;
-    background: $primary;
+    color: $primary;
+    background: $l-primary;
   }
 
   &.widget-referral .widget-heading .w-icon {
-    color: $l-danger;
-    background-color: $danger;
+    color: $danger;
+    background-color: $l-danger;
   }
 
   &.widget-social {
@@ -71,7 +72,7 @@
   }
 
   &.widget-engagement .widget-heading .w-icon {
-    background-color: $m-color_14;
-    color: $l-success;
+    background-color: $l-success;
+    color: $m-color_14;
   }
 }

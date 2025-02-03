@@ -9,8 +9,7 @@
   right: -30px;
   top: 125px;
   width: 236px;
-  height: auto;
-  border-left: 1px solid #191e3a;
+  border-left: 1px solid $m-color_3;
 
   .sidenav-header {
     &:after {
@@ -22,12 +21,12 @@
       font-size: 18px;
       color: #fff;
       margin-bottom: 20px;
-      background: #4361ee;
+      background: $primary;
       text-align: center;
       border-radius: 5px;
       padding: 4px;
       letter-spacing: 1px;
-      background-image: linear-gradient(to right, #4361ee 0%, #805dca 100%);
+      background-image: linear-gradient(to right, $primary 0%, $secondary 100%);
     }
   }
 
@@ -39,14 +38,20 @@
     a {
       display: block;
       padding: 3px 0px;
-      color: #bfc9d4;
+      color: $dark;
       font-size: 12px;
       padding: 3px 25px;
 
-      &.active, &:hover {
-        color: #25d5e4;
+      &.active {
+        color: $secondary;
         font-weight: 700;
-        border-left: 1px solid #25d5e4;
+        border-left: 1px solid $secondary;
+      }
+
+      &:hover {
+        color: $primary;
+        font-weight: 700;
+        border-left: 1px solid $secondary;
       }
     }
   }
@@ -56,7 +61,6 @@
   display: flex;
   max-width: 58.333333% !important;
   margin-left: 80px;
-  margin-left: 2px;
   padding: 0 16px !important;
 
   > .container {

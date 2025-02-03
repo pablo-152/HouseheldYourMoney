@@ -8,6 +8,7 @@
   position: relative;
 
   h5 {
+    font-size: 19px;
     margin-bottom: 20px;
   }
 
@@ -19,14 +20,15 @@
     border-collapse: separate;
     border-spacing: 0 5px;
     margin-bottom: 0;
-    background: transparent;
 
     > {
       thead > tr > th {
         text-transform: initial;
         font-weight: 600;
         border-top: none;
-        background: $m-color_18;
+        background: rgba(186, 231, 255, 0.34);
+        border-right: none;
+        border-left: none;
         padding-top: 0;
         padding-bottom: 0;
         padding-right: 0;
@@ -46,7 +48,7 @@
         }
 
         .th-content {
-          color: $m-color_4;
+          color: $m-color_9;
           font-weight: 600;
           font-size: 14px;
           letter-spacing: 1px;
@@ -76,17 +78,23 @@
           padding-left: 0;
           -webkit-transition: all 0.1s ease;
           transition: all 0.1s ease;
+        }
 
-          .td-content {
-            cursor: pointer;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: $m-color_6;
+        &:hover {
+          > td {
+            transform: translateY(-1px) scale(1.01);
+          }
+
+          > td .td-content {
+            color: $m-color_9;
           }
         }
 
-        &:hover > td .td-content {
-          color: $m-color_4;
+        > td .td-content {
+          cursor: pointer;
+          font-weight: 600;
+          letter-spacing: 1px;
+          color: $m-color_6;
         }
 
         > td {
@@ -107,7 +115,7 @@
 
     .td-content {
       &.customer-name {
-        color: $m-color_6;
+        color: $m-color_9;
         font-weight: 600;
         margin-bottom: 0;
         font-size: 13px;
@@ -115,20 +123,7 @@
       }
 
       &.product-brand {
-        margin-bottom: 0;
-        font-size: 12px;
-        font-weight: 600;
-        text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.26);
-        padding: 10px 0 10px 15px;
-      }
-
-      &.product-invoice {
-        padding: 10px 0 10px 15px;
-      }
-
-      &.pricing {
-        width: 50%;
-        margin: 0 auto;
+        letter-spacing: 1px;
       }
 
       img {
@@ -151,12 +146,28 @@
 
     .td-content .badge {
       transform: none;
-      border: none;
-      font-weight: 500;
     }
 
-    tr:hover .td-content .badge {
-      background: transparent;
+    tr {
+      &:hover .td-content .badge {
+        transform: translateY(-3px);
+      }
+
+      .td-content {
+        .outline-badge-primary {
+          background-color: $l-primary;
+        }
+
+        .outline-badge-success {
+          color: $m-color_14;
+          background-color: $l-success;
+          border-color: $m-color_14;
+        }
+
+        .outline-badge-danger {
+          background-color: $l-danger;
+        }
+      }
     }
   }
 }

@@ -1,40 +1,24 @@
-<!-- Footer -->
-<footer class="footer pt-0">
-        <div class="row align-items-center justify-content-lg-between">
-          <div class="col-lg-6">
-            <div class="copyright text-center  text-lg-left  text-muted">
-                &copy; 2025 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Pablo Ruiz - Desarrollador - LyF Proyectos S.A.C.</a>
-            </div>
-          </div>
-          <!--<div class="col-lg-6">
-            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-              </li>
-            </ul>
-          </div>-->
-        </div>
-      </footer>
-    </div>
-  </div>
-  <!-- Argon Scripts -->
-  <!-- Core -->
-  <script src="<?=base_url() ?>template/assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="<?=base_url() ?>template/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="<?=base_url() ?>template/assets/vendor/js-cookie/js.cookie.js"></script>
-  <script src="<?=base_url() ?>template/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-  <script src="<?=base_url() ?>template/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-  <!-- Argon JS -->
-  <script src="<?=base_url() ?>template/assets/js/argon.js?v=1.2.0"></script>
-</body>
 
+</div>
+    <!-- END MAIN CONTAINER -->
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="<?=base_url() ?>template/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="<?=base_url() ?>template/bootstrap/js/popper.min.js"></script>
+    <script src="<?=base_url() ?>template/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?=base_url() ?>template/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="<?=base_url() ?>template/assets/js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+    <script src="<?=base_url() ?>template/assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="<?=base_url() ?>template/plugins/apex/apexcharts.min.js"></script>
+    <script src="<?=base_url() ?>template/assets/js/dashboard/dash_1.js"></script>
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+</body>
 </html>

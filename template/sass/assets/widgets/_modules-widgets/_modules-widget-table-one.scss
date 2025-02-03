@@ -7,7 +7,7 @@
 .widget-table-one {
   .widget-heading {
     display: flex;
-    margin-bottom: 31px!important;
+    margin-bottom: 31px;
     justify-content: space-between;
 
     .task-action {
@@ -18,7 +18,7 @@
       }
 
       .dropdown-menu {
-        transform: translate3d(-141px, 0, 0px);
+        transform: translate3d(-141px, c0, 0px);
       }
     }
   }
@@ -49,8 +49,8 @@
           letter-spacing: 1px;
 
           .avatar-title {
-            background-color: rgba(231, 81, 90, 0.388);
-            color: $m-color_4;
+            background-color: $l-danger;
+            color: $danger;
             border-radius: 12px;
             position: relative;
             border-radius: 12px;
@@ -65,22 +65,22 @@
     }
 
     &.t-info .t-item .t-icon .avatar .avatar-title {
-      background-color: rgba(33, 150, 243, 0.388);
-      color: $m-color_4;
+      background-color: $l-info;
+      color: $info;
     }
 
     &.t-secondary .t-item .t-icon .icon {
-      background-color: rgba(128, 93, 202, 0.388);
+      background-color: $l-secondary;
 
       svg {
-        color: $m-color_4;
+        color: $secondary;
       }
     }
 
     .t-item {
       .t-icon .icon {
         position: relative;
-        background-color: rgba(226, 160, 63, 0.388);
+        background-color: $l-warning;
         border-radius: 12px;
         display: inline-flex;
         align-items: center;
@@ -94,7 +94,7 @@
           justify-content: center;
           width: 19px;
           height: 19px;
-          color: $m-color_4;
+          color: $warning;
           stroke-width: 2;
         }
       }
@@ -104,10 +104,9 @@
 
         h4 {
           font-size: 14px;
-          font-weight: 600;
+          font-weight: 700;
           margin-bottom: 0;
           transition: all 0.5s ease;
-          color: $m-color_4;
         }
       }
     }

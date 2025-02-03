@@ -30,7 +30,8 @@
 
 .invoice-inbox {
   padding: 0;
-  background-color: $m-color_10;
+  background-color: #fff;
+  border: 1px solid $m-color_3;
   box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
   border-radius: 6px;
 
@@ -74,7 +75,7 @@
   padding: 36px 35px;
   margin-bottom: 40px;
   padding-bottom: 25px;
-  border-bottom: 1px solid $m-color_18;
+  border-bottom: 1px solid $m-color_2;
 }
 
 .inv--customer-detail-section {
@@ -87,7 +88,7 @@
     h3.in-heading {
       font-size: 18px;
       font-weight: 600;
-      color: $m-color_3;
+      color: $m-color_10;
       margin: 0;
       margin-left: 12px;
     }
@@ -105,7 +106,7 @@
         width: 42px;
         height: 42px;
         margin-right: 10px;
-        color: $m-color_25;
+        color: $primary;
         fill: rgba(27, 85, 226, 0.2392156863);
       }
     }
@@ -126,10 +127,10 @@
     }
 
     .inv-customer-name {
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 2px;
       font-size: 13px;
-      color: $m-color_25;
+      color: $primary;
     }
 
     .inv-detail-title {
@@ -144,18 +145,10 @@
       margin-bottom: 15px;
     }
 
-    .inv-street-addr {
-      /* font-weight: 600; */
-      margin-bottom: 2px;
-      font-size: 13px;
-      color: $m-color_6;
-    }
-
-    .inv-email-address {
+    .inv-street-addr, .inv-email-address {
       font-weight: 600;
       margin-bottom: 2px;
       font-size: 13px;
-      color: $m-color_6;
     }
 
     .inv-list-number {
@@ -169,13 +162,12 @@
       .inv-number {
         font-weight: 400;
         font-size: 18px;
-        color: $m-color_25;
+        color: $primary;
       }
     }
 
     .inv-created-date, .inv-due-date {
       margin-bottom: 2px;
-      color: $m-color_6;
 
       .inv-title {
         font-weight: 700;
@@ -206,7 +198,7 @@
       border: none;
       border-top: 1px solid $m-color_3;
       border-bottom: 1px solid $m-color_3;
-      color: $m-color_4 !important;
+      color: $m-color_9 !important;
 
       &:first-child {
         padding-left: 35px;
@@ -228,18 +220,15 @@
     }
 
     td {
-      color: $m-color_6;
+      color: $m-color_9;
+      font-weight: 600;
       border: none;
       padding: 10px 25px;
       vertical-align: top !important;
     }
 
-    tbody tr {
-      border-bottom: 1px solid $m-color_18;
-
-      &:nth-of-type(even) td {
-        background-color: rgba(3, 3, 5, 0.122) !important;
-      }
+    tbody tr:nth-of-type(even) td {
+      background-color: $m-color_20;
     }
   }
 
@@ -248,7 +237,7 @@
     font-weight: 600;
 
     .inv-title {
-      color: $m-color_25;
+      color: $primary;
       font-weight: 600;
       margin-bottom: 15px;
       width: 65%;
@@ -266,7 +255,6 @@
     span {
       font-weight: 500;
       display: inline-block;
-      color: $m-color_6;
       white-space: nowrap;
     }
 
@@ -274,7 +262,6 @@
       font-weight: 600;
       font-size: 13px;
       display: inline-block;
-      color: $m-color_6;
       white-space: normal;
       margin-right: 4px;
     }
@@ -284,7 +271,7 @@
     padding: 0 35px;
     margin-bottom: 25px;
     padding-bottom: 25px;
-    border-bottom: 1px solid $m-color_18;
+    border-bottom: 1px solid $m-color_2;
 
     .grand-total-title h4, .grand-total-amount h4 {
       position: relative;
@@ -362,7 +349,8 @@
   padding: 25px;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: $m-color_10;
+  background-color: #fff;
+  border: 1px solid $m-color_3;
   border-radius: 6px;
 
   label {

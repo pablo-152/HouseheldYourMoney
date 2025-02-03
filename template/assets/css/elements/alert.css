@@ -24,7 +24,7 @@
     vertical-align: middle;
     width: 33px;
     height: 33px;
-    stroke-width: 1.2; }
+    stroke-width: 1.5; }
   .alert .close {
     color: #fff;
     opacity: 1;
@@ -98,43 +98,43 @@
 /*      Light Alert         */
 .alert-light-primary {
   color: #4361ee;
-  background-color: rgba(67, 97, 238, 0.15);
-  border-color: rgba(67, 97, 238, 0.55); }
+  background-color: #eaf1ff;
+  border-color: #4361ee; }
   .alert-light-primary svg.close {
     color: #4361ee; }
 
 .alert-light-warning {
   color: #e2a03f;
-  background-color: rgba(226, 160, 63, 0.15);
-  border-color: rgba(226, 160, 63, 0.55); }
+  background-color: #fff9ed;
+  border-color: #e2a03f; }
   .alert-light-warning svg.close {
     color: #e2a03f; }
 
 .alert-light-success {
   color: #1abc9c;
-  background-color: rgba(26, 188, 156, 0.15);
-  border-color: rgba(26, 188, 156, 0.55); }
+  background-color: #ddf5f0;
+  border-color: #1abc9c; }
   .alert-light-success svg.close {
     color: #1abc9c; }
 
 .alert-light-info {
   color: #2196f3;
-  background-color: rgba(33, 150, 243, 0.15);
-  border-color: rgba(33, 150, 243, 0.55); }
+  background-color: #e7f7ff;
+  border-color: #2196f3; }
   .alert-light-info svg.close {
     color: #2196f3; }
 
 .alert-light-danger {
   color: #e7515a;
-  background-color: rgba(231, 81, 90, 0.15);
-  border-color: rgba(231, 81, 90, 0.55); }
+  background-color: #fff5f5;
+  border-color: #e7515a; }
   .alert-light-danger svg.close {
     color: #e7515a; }
 
 .alert-light-dark {
-  color: #bfc9d4;
-  background-color: rgba(59, 63, 92, 0.15);
-  border-color: rgba(59, 63, 92, 0.55); }
+  color: #3b3f5c;
+  background-color: #e3e4eb;
+  border-color: #3b3f5c; }
   .alert-light-dark svg.close {
     color: #3b3f5c; }
 
@@ -142,8 +142,7 @@
 .alert-background {
   color: #fff;
   background: #fff url(../../img/ab-1.jpeg) no-repeat center center;
-  background-size: cover;
-  border: none; }
+  background-size: cover; }
 
 /*  Gradient Alerts      */
 .alert-gradient {
@@ -158,7 +157,7 @@
   background-color: #61b6cd;
   border-color: #61b6cd;
   border-radius: 5px;
-  color: #191e3a; }
+  color: #fff; }
   .custom-alert-1 .alert-icon {
     margin-right: 25px; }
   .custom-alert-1 .media-body {

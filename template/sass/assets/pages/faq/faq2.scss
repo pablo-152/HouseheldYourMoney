@@ -10,8 +10,10 @@
 
 .faq .faq-layouting .fq-tab-section {
   padding: 35px 50px;
-  background: transparent;
+  background: #fff;
   border-radius: 6px;
+  border: 1px solid $m-color_3;
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
 
   h2 {
     font-size: 25px;
@@ -19,18 +21,16 @@
     margin-bottom: 45px;
     letter-spacing: 0px;
     text-align: center;
-    color: $m-color_4;
 
     span {
-      color: $m-color_14;
+      color: $primary;
     }
   }
 
   .accordion .card {
-    border: 1px solid $m-color_12;
+    border: 1px solid $m-color_3;
     border-radius: 6px;
     margin-bottom: 4px;
-    background: $m-color_12;
 
     .card-header {
       padding: 0;
@@ -41,13 +41,13 @@
         padding: 15px 19px;
         font-weight: 600;
         font-size: 16px;
-        color: $m-color_14;
+        color: $primary;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
 
         &[aria-expanded="true"] {
-          border-bottom: 2px solid $m-color_12;
+          border-bottom: 1px solid $m-color_3;
         }
       }
 
@@ -62,11 +62,12 @@
         }
 
         &[aria-expanded="true"] .faq-q-title {
-          color: $m-color_14;
+          color: $primary;
         }
 
         .icons {
           display: inline-block;
+          float: right;
 
           svg {
             color: $m-color_6;
@@ -74,7 +75,7 @@
         }
 
         &[aria-expanded="true"] .icons svg {
-          color: $m-color_14;
+          color: $primary;
         }
 
         svg.feather-thumbs-up {
@@ -89,13 +90,13 @@
     }
 
     &:hover .card-header div svg.feather-thumbs-up {
-      color: $m-color_14;
+      color: $primary;
       fill: rgba(27, 85, 226, 0.2392156863);
     }
 
     .card-header div {
       &[aria-expanded="true"] svg.feather-thumbs-up {
-        color: $m-color_14;
+        color: $primary;
         fill: rgba(27, 85, 226, 0.2392156863);
       }
 
@@ -108,9 +109,11 @@
     }
 
     &:hover .card-header div span.faq-like-count, .card-header div[aria-expanded="true"] span.faq-like-count {
-      color: $m-color_14;
+      color: $primary;
       fill: rgba(27, 85, 226, 0.2392156863);
     }
+
+    .collapse {}
 
     .card-body {
       padding: 19px 30px;
@@ -119,7 +122,6 @@
         font-size: 13px;
         line-height: 23px;
         letter-spacing: 1px;
-        color: $m-color_4;
       }
     }
   }

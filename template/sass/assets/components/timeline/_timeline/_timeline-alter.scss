@@ -17,7 +17,7 @@
       max-width: 100px;
       font-size: 16px;
       font-weight: 600;
-      color: $m-color_6;
+      color: $dark;
       align-self: center;
     }
   }
@@ -116,7 +116,7 @@
 
     p {
       margin: 0;
-      background: $primary;
+      background: #c2d5ff;
       height: 45px;
       width: 45px;
       border-radius: 50%;
@@ -124,7 +124,7 @@
       align-self: center;
       justify-content: center;
       margin-bottom: 0;
-      color: $l-primary;
+      color: #1b55e2;
       font-weight: 700;
       font-size: 18px;
       z-index: 7;
@@ -157,11 +157,11 @@
     p {
       font-size: 13px;
       margin: 0;
-      color: $m-color_6;
+      color: $dark;
       font-weight: 600;
 
       a {
-        color: $m-color_14;
+        color: #1b55e2;
         font-weight: 600;
       }
     }
