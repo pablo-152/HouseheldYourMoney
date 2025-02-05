@@ -9,9 +9,18 @@
     public function get_navegacion() {
       $this->db->select('*');
       $this->db->order_by('orden_navegacion', 'ASC');
+      $this->db->where('estado', '2');
       $query = $this->db->get('navegacion');
       //echo $this->db->last_query();
       return $query->result(); 
+    }
+
+    public function get_navegacion_modulo() {
+      $this->db->select('*');
+      $this->db->order_by('orden_navegacion', 'ASC');
+      $query = $this->db->get('navegacion');
+      //echo $this->db->last_query();
+      return $query->result_array(); 
     }
 
   // Obtener submódulos de un módulo
@@ -23,6 +32,29 @@
     }
     return null; // En caso de no haber resultados
 }
+  public function get_id_usuario_x_google($dato){
+      $this->db->select('id_usuario,id_nivel');
+      $this->db->where('estado', '2');
+      $this->db->where('email_usuario', $dato['email']);
+      $query = $this->db->get('usuario');
+      //echo $this->db->last_query();
+      return $query->result_array(); 
+  }
+
+  public function insert_usuario_x_google($dato){
+    $data = [
+      'nick_usuario' => $dato['nombre'],
+      'email_usuario' => $dato['email'],
+      'foto_usuario' => $dato['foto'],
+      //'codigo_usuario' => $dato['foto'],
+      //'id_nivel' => 2, // Asigna un nivel por defecto, cámbialo según tu lógica
+      'estado' => 2, // Activo por defecto 
+      'fec_reg' => date('Y-m-d H:i:s'),
+      'user_reg' => 1
+  ];
+
+  return $this->db->insert('usuario', $data);
+  }
 
   // Obtener subsubmódulos de un submódulo
   public function get_subsubmodulos($id_padre) {
@@ -34,11 +66,11 @@
 
 
     public function encriptar($dato){
-        $sql = "call usp_retorna_cadena_pwd_ED('".$dato['password']."','E')";
-        //echo($sql);
-        $query = $this->db->query($sql)->result_Array();
-        mysqli_next_result( $this->db->conn_id );
-        return $query;
+      $sql = "call usp_retorna_cadena_pwd_ED('".$dato['password']."','E')";
+      //echo($sql);
+      $query = $this->db->query($sql)->result_Array();
+      mysqli_next_result( $this->db->conn_id );
+      return $query;
     }
 
     public function login2($dato){
@@ -50,7 +82,7 @@
   }
 
     public function login($usuario){
-      $sql = "SELECT * FROM colaborador WHERE correo_corporativo = '".$usuario."' ";
+      $sql = "SELECT * FROM usuario WHERE codigo_usuario = '".$usuario."' ";
       //echo($sql);
       $query = $this->db->query($sql)->result_array();
       return $query;
