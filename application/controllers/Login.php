@@ -80,14 +80,22 @@ class Login extends CI_Controller {
 		echo $_SESSION['usuario'][0]['id_nivel'];
 	}
 
-	public function Lista_Navegacion(){
+	public function Navegacion(){
 		if (!$this->session->userdata('usuario')) {
 			redirect('/login');
 		}
 		$navegacion = $this->N_model->get_navegacion();
         $data['navegacion'] = $navegacion;
-		$data['navegacion_modulo'] = $this->N_model->get_navegacion_modulo();
 		$this->load->view('View_HYM/Configuraciones/Modulo-General/index',$data);
+	}
+
+	public function Lista_Navegacion(){
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+		
+		$data['navegacion_modulo'] = $this->N_model->get_navegacion_modulo();
+		$this->load->view('View_HYM/Configuraciones/Modulo-General/lista',$data);
 	}
 
 	public function logout(){
@@ -100,5 +108,11 @@ class Login extends CI_Controller {
         $data['navegacion'] = $navegacion;
         $this->load->view('View_HYM/index',$data);
     }
+
+	public function Perfil(){
+		$navegacion = $this->N_model->get_navegacion();
+        $data['navegacion'] = $navegacion;
+		$this->load->view('View_HYM/Perfil/usuario_perfil',$data);
+	}
 
 }
