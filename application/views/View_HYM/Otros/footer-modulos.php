@@ -8,45 +8,41 @@
         </div>
     </div>
 </div>
-    <div id="zoomupModal" class="modal animated zoomInUp custo-zoomInUp" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal Header</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                    </button>
-                </div>
-                <div class="modal-body">
-                        <p class="modal-text">Nulla imperdiet sed ipsum non lacinia. Duis accumsan egestas nulla, vel commodo orci tempus quis. Fusce malesuada felis nec vehicula luctus. Proin luctus sapien nunc, quis varius dui gravida quis. Sed eget elit a augue porta elementum ut nec nibh. Morbi non dolor ac quam commodo interdum.</p>
-                </div>
-                <div class="modal-footer md-button">
-                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
-            </div>
+<div id="Modal_Zoom" class="modal animated zoomInUp custo-zoomInUp" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
         </div>
     </div>
-    <script src="<?=base_url() ?>template/assets/js/libs/jquery-3.1.1.min.js"></script>
-    <script src="<?=base_url() ?>template/bootstrap/js/popper.min.js"></script>
-    <script src="<?=base_url() ?>template/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?=base_url() ?>template/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="<?=base_url() ?>template/assets/js/app.js"></script>
-    
-    <script>
-        $(document).ready(function() {
-            App.init();
-        });
-    </script>
-    <script src="<?=base_url() ?>template/plugins/highlight/highlight.pack.js"></script>
-    <script src="<?=base_url() ?>template/assets/js/custom.js"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
+</div>
+<script src="<?=base_url() ?>template/assets/js/libs/jquery-3.1.1.min.js"></script>
+<script src="<?=base_url() ?>template/bootstrap/js/popper.min.js"></script>
+<script src="<?=base_url() ?>template/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?=base_url() ?>template/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="<?=base_url() ?>template/assets/js/app.js"></script>
 
-    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="<?=base_url() ?>template/assets/js/scrollspyNav.js"></script>
-    <script src="<?=base_url() ?>template/plugins/table/datatable/datatables.js"></script>
-  
-    <!-- END PAGE LEVEL SCRIPTS -->
+<script>
+    $(document).ready(function() {
+        App.init();
+        $("#Modal_Zoom").on("show.bs.modal", function(e) {
+            var link = $(e.relatedTarget);
+            $(this).find(".modal-content").load(link.attr("modal_zoom"));
+        });
+    });
+</script>
+
+<script src="<?=base_url() ?>template/plugins/select2/custom-select2.js"></script>
+<script src="<?=base_url() ?>template/assets/js/custom.js"></script>
+<script src="<?=base_url() ?>template/plugins/dropify/dropify.min.js"></script>
+<script src="<?=base_url() ?>template/plugins/blockui/jquery.blockUI.min.js"></script>
+<script src="<?=base_url() ?>template/assets/js/users/account-settings.js"></script>
+<script src="<?=base_url() ?>template/plugins/highlight/highlight.pack.js"></script>
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="<?=base_url() ?>template/assets/js/scrollspyNav.js"></script>
+<script src="<?=base_url() ?>template/plugins/table/datatable/datatables.js"></script>
+<script src="<?=base_url() ?>template/plugins/select2/select2.min.js"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+
 </body>
 </html>  

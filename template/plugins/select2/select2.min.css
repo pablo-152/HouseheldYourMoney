@@ -239,7 +239,7 @@ span.select2.select2-container.select2-container--default.select2-container--ope
   padding: 8px 16px;
   letter-spacing: 1px;
   font-weight: 700;
-  background: #f1f2f3; }
+  background: white; }
   .select2-container--default .select2-selection--multiple .select2-selection__rendered {
     box-sizing: border-box;
     list-style: none;
@@ -260,8 +260,8 @@ span.select2.select2-container.select2-container--default.select2-container--ope
     margin-top: 5px;
     margin-right: 10px; }
   .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #e4e4e4;
-    border: 1px solid #ebedf2;
+    background-color: #c9d8ff7d;
+    border: 1px solid #bdcdf5;
     border-radius: 4px;
     cursor: default;
     float: left;
@@ -547,3 +547,10 @@ span.select2.select2-container.select2-container--default.select2-container--ope
 
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb; }
+
+  .select2-container--default .select2-dropdown {
+    z-index: 9999 !important; 
+}
+.modal-content {
+    overflow: visible !important;
+}

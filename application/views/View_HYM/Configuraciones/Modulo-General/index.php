@@ -14,7 +14,7 @@
                             </div>
                             <div class="col-xl-6 text-right">
                                 <div class="form-group">
-                                    <button class="btn btn-dark mb-4 mr-2 btn-lg" data-toggle="modal" data-target="#zoomupModal">Nuevo</button>
+                                    <button class="btn btn-dark mb-4 mr-2 btn-lg" data-toggle="modal" data-target="#Modal_Zoom" modal_zoom="<?= site_url('Login/Modal_Navegacion') ?>">Nuevo</button>
                                 </div>
                             </div>
                         </div>

@@ -110,9 +110,30 @@ class Login extends CI_Controller {
     }
 
 	public function Perfil(){
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
 		$navegacion = $this->N_model->get_navegacion();
         $data['navegacion'] = $navegacion;
+		$data['extra_css'] = base_url() . 'template/assets/css/users/user-profile.css';
 		$this->load->view('View_HYM/Perfil/usuario_perfil',$data);
+	}
+
+	public function Modulo_Editar_Colaborador(){
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+		$navegacion = $this->N_model->get_navegacion();
+        $data['navegacion'] = $navegacion;
+		$data['extra_css'] = base_url() . 'template/assets/css/users/user-profile.css';
+		$this->load->view('View_HYM/Perfil/editar',$data);
+	}
+
+	public function Modal_Navegacion(){
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+		$this->load->view('View_HYM/Configuraciones/Modulo-General/registrar');
 	}
 
 }

@@ -37,16 +37,21 @@
                         aria-expanded="false" 
                         class="dropdown-toggle"
                     <?php endif; ?>
+                    
                 >
                     <div class="">
                         <?php echo $modulo->svg_navegacion; ?>
                         <span><?php echo $modulo->titulo_navegacion; ?></span>
                     </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
+
+                    <?php if (empty($modulo->link_navegacion)): ?>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    <?php endif; ?>
+                   
                 </a>
                 
                 <?php if (empty($modulo->link_navegacion)): ?>
@@ -64,12 +69,17 @@
                                         aria-expanded="false" 
                                         class="dropdown-toggle"
                                     <?php endif; ?>
-                                >
+                                    
+                            >
                                     <?php echo $submodulo->titulo_navegacion; ?>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-                                    stroke-linejoin="round" class="feather feather-chevron-right">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
+                                    <?php if (empty($submodulo->link_navegacion)): ?>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                            stroke-linejoin="round" class="feather feather-chevron-right">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg>
+                                        </div>
+                                    <?php endif; ?>
                                 </a>
                                 
                                 <?php if (empty($submodulo->link_navegacion)): ?>

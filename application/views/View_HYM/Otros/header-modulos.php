@@ -8,24 +8,40 @@
     <link rel="icon" type="image/x-icon" href="<?=base_url() ?>template/assets/img/favicon.ico"/>
     <link href="<?=base_url() ?>template/assets/css/loader.css" rel="stylesheet" type="text/css" />
     <script src="<?=base_url() ?>template/assets/js/loader.js"></script>
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="<?=base_url() ?>template/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url() ?>template/assets/css/plugins.css" rel="stylesheet" type="text/css" />
-    <!-- END GLOBAL MANDATORY STYLES -->
+    
+    <link href="<?=base_url() ?>template/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="<?=base_url() ?>template/assets/js/loader.js"></script>
 
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+     <!-- Estilos globales y esenciales -->
+     <link href="<?=base_url() ?>template/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url() ?>template/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilos para componentes específicos -->
+    <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/dropify/dropify.min.css">
+    <link href="<?=base_url() ?>template/assets/css/users/account-setting.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- Estilos de la página -->
+    <link href="<?=base_url() ?>template/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/select2/select2.min.css">
     <link href="<?=base_url() ?>template/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
     <link href="<?=base_url() ?>template/assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
-    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+    <!-- Estilos para animaciones y tablas -->
     <link href="<?=base_url() ?>template/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
-
     <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/table/datatable/datatables.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/table/datatable/dt-global_style.css">
-    <link href="<?=base_url() ?>template/assets/css/tables/table-basic.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url() ?>template/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
-    <link href="<?=base_url() ?>template/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
 
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <?php if (isset($extra_css)) { ?>
+        <link href="<?= $extra_css ?>" rel="stylesheet" type="text/css" />
+    <?php } else { ?>
+        <link rel="stylesheet" type="text/css" href="<?=base_url() ?>template/plugins/table/datatable/dt-global_style.css">
+    <?php } ?>
+
+    <link href="<?=base_url() ?>template/assets/css/tables/table-basic.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url() ?>template/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
     <link href="<?=base_url() ?>template/assets/css/users/user-profile.css" rel="stylesheet" type="text/css" />
 </head>
 
