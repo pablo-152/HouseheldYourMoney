@@ -7,6 +7,7 @@
             <th>link_navegacion</th>
             <th>titulo_navegacion</th>
             <th>descripcion_navegacion</th>
+            <th>niveles</th>
             <th>estado</th>
             <th class="text-center dt-no-sorting"></th>
         </tr>
@@ -15,11 +16,12 @@
         <?php foreach ($navegacion_modulo as $list){ ?> 
             <tr>
                 <td><?php echo $list['id_padre_navegacion']; ?></td>
-                <td><?php echo $list['nivel_navegacion']; ?></td>
+                <td><?php echo $list['tipo_navegacion']; ?></td>
                 <td><?php echo $list['svg_navegacion']; ?></td>
                 <td><?php echo $list['link_navegacion']; ?></td>
                 <td><?php echo $list['titulo_navegacion']; ?></td>
                 <td><?php echo $list['descripcion_navegacion']; ?></td>
+                <td><?php echo $list['id_nivel_navegacion']; ?></td>
                 <td><?php echo $list['estado']; ?></td>
                 <td class="text-center">
                     <ul class="table-controls">

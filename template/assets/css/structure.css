@@ -1049,7 +1049,7 @@ code {
     ======================
 */
 .footer-wrapper {
-  padding: 10px 20px 10px 18px;
+  padding: 3px 10px 10px 10px;
   display: inline-block;
   background: transparent;
   font-weight: 600;
@@ -1073,9 +1073,9 @@ code {
 .footer-wrapper .footer-section svg {
   color: #e7515a;
   fill: rgba(231, 81, 90, 0.419608);
-  width: 15px;
-  height: 15px;
-  vertical-align: text-top; }
+  width: 30px;
+  height: 30px;
+  /*vertical-align: text-top;*/ }
 
 /*  
     ======================

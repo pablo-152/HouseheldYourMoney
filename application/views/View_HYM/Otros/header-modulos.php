@@ -282,3 +282,4 @@
 
         <div class="overlay"></div>
         <div class="search-overlay"></div>
+        <div class="sidebar-wrapper sidebar-theme">
