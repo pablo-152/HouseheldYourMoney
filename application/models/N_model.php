@@ -224,4 +224,6 @@ class n_model extends CI_Model
     $query = $this->db->get('navegacion'); // Cambia 'navegacion' por el nombre real de tu tabla
     return $query->row(); // Devuelve un solo resultado
   }
+
+  
 }

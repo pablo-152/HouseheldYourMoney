@@ -1,4 +1,4 @@
-    <div class="footer-wrapper">
+        <div class="footer-wrapper">
             <div class="footer-section f-section-1">
                 <p class="">Copyright ©2025 <a target="_blank" href="">Pablo Ruiz</a>, Reservados todos los derechos.</p>
             </div>
@@ -52,6 +52,13 @@
 <script src="<?=base_url() ?>template/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script src="<?=base_url() ?>template/assets/js/app.js"></script>
 
+<?php 
+    $Mid = $this->session->userdata('Mid');
+    $MSid = $this->session->userdata('MSid');
+    $MSSid = $this->session->userdata('MSSid');
+    $url = $this->session->userdata('url');
+    $SoloModulo = str_replace('Div-', '', $Mid);
+?>
 <script>
     $(document).ready(function() {
         App.init();
@@ -60,6 +67,60 @@
             $(this).find(".modal-content").load(link.attr("modal_zoom"));
         });
     });
+    activarMenu("<?= $Mid ?>", "<?= $MSid ?>", "<?= $MSSid ?>", "<?= $url ?>");
+
+    function activarMenu(elMid, elMSid = "", elMSSid = "", url = "") {
+
+        //alert(elMid+elMSid+elMSSid+url);
+        const limpiarPrefijo = id => id.replace("Div", "");
+
+        // Limpiar todos los estados activos previos
+        $('li').removeClass('active');
+        $('[data-active]').removeAttr('data-active');
+        $('.collapse').removeClass('show');
+        $('a').attr('aria-expanded', 'false');
+
+        if (!elMid) return; // Si no hay módulo, no hacer nada
+
+        const soloModulo = limpiarPrefijo(elMid);
+        const soloSubModulo = elMSid ? limpiarPrefijo(elMSid) : "";
+
+        // Activar el módulo principal
+        $("#" + elMid).attr('data-active', 'true');
+        $("#" + soloModulo).addClass('show');
+
+        if (elMSSid) {
+            // Sub-submódulo activo
+            $("#" + elMSSid).closest('li').addClass('active');
+            $("#" + soloSubModulo).addClass('show');
+            $("#" + elMSid).attr('aria-expanded', 'true');
+        } else if (elMSid) {
+            // Solo submódulo activo
+            $("#" + elMSid).closest('li').addClass('active');
+        } else {
+            // Solo módulo activo
+            $("#" + elMid).closest('li').addClass('active');
+        }
+
+        if(url != ""){
+            let fullUrl = "<?= site_url(); ?>" + url;
+            $.ajax({
+                type: "POST",
+                url: fullUrl,
+                data: {
+                    'Mid': elMid,
+                    'MSid': elMSid, 
+                    'MSSid': elMSSid,
+                    'url' : url
+                },
+                success: function(resp) {
+                    //location.href = fullUrl;
+                    $('#modulos').html(resp);
+                }
+            });
+        }
+    }
+
 </script>
 
 <script src="<?=base_url() ?>template/plugins/select2/custom-select2.js"></script>

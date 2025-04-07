@@ -90,23 +90,28 @@ class Login extends CI_Controller
 		if (!$this->session->userdata('usuario')) {
 			redirect('/login');
 		}
-		// Obtener los valores enviados por AJAX
-		$Mid = $this->input->post('Mid');
-		$MSid = $this->input->post('MSid');
-		$MSSid = $this->input->post('MSSid');
 
-		// Obtener la navegación
-		$navegacion = $this->N_model->get_navegacion();
+		$dato['Mid'] = $this->input->post('Mid');
+		$dato['MSid'] = $this->input->post('MSid');
+		$dato['MSSid'] = $this->input->post('MSSid');
+		$dato['url'] = $this->input->post('url');
 
-		// Pasar datos a la vista
-		$dato['Mid'] = $Mid;
-		$dato['MSid'] = $MSid;
-		$dato['MSSid'] = $MSSid;
-		$dato['navegacion'] = $navegacion;
-
-		// Cargar la vista
+		$this->setSessionData($dato['Mid'], $dato['MSid'], $dato['MSSid'], $dato['url']);
+		$dato['navegacion'] = $this->N_model->get_navegacion();
 		$this->load->view('View_HYM/Configuraciones/Modulo-General/index', $dato);
 	}
+
+	public function Navegacion_Modulo()
+	{
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+
+
+		$this->load->view('View_HYM/Configuraciones/Modulo-General/principal');
+	}
+
+
 
 	public function Lista_Navegacion()
 	{
@@ -121,7 +126,7 @@ class Login extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('');
+		redirect('/Login');
 	}
 
 	public function Modulo_Principal()
@@ -171,7 +176,7 @@ class Login extends CI_Controller
 
 		// Determinar el tipo de navegación (Módulo, Submódulo, Subsubmódulo)
 		if ($id_padre == '0' || $id_padre == NULL) {
-			$tipo_navegacion = 'modulo';
+			$tipo_navegacion = 'Modulo';
 			$id_padre = NULL;
 		} else {
 			// Consultamos el tipo del padre en la base de datos
@@ -221,4 +226,56 @@ class Login extends CI_Controller
 		$data['navegacion'] = $this->N_model->get_navegacion();
 		$this->load->view('View_HYM/Otros/nav-modulos', $data);
 	}
+
+	public function Modal_Editar_Navegacion()
+	{
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+		$dato['list_navegacion'] = $this->N_model->get_list_navegacion_x_nivel(['Modulo', 'SubModulo']);
+		$dato['list_niveles'] = $this->N_model->get_list_nivel('2');
+		$this->load->view('View_HYM/Configuraciones/Modulo-General/registrar', $dato);
+	}
+
+	public function setSessionData($Mid, $MSid, $MSSid, $url)
+    {
+        // Primero, elimina cualquier dato anterior de la sesión
+        $this->session->unset_userdata('Mid');
+        $this->session->unset_userdata('MSid');
+        $this->session->unset_userdata('MSSid');
+		$this->session->unset_userdata('url');
+        
+        // Ahora, guarda los nuevos valores
+        $this->session->set_userdata('Mid', $Mid);
+        $this->session->set_userdata('MSid', $MSid);
+        $this->session->set_userdata('MSSid', $MSSid);
+		$this->session->set_userdata('url', $url);
+    }
+
+	public function Prueba()
+	{
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+
+		$dato['Mid'] = $this->input->post('Mid');
+		$dato['MSid'] = $this->input->post('MSid');
+		$dato['MSSid'] = $this->input->post('MSSid');
+		$dato['url'] = $this->input->post('url');
+
+		$this->setSessionData($dato['Mid'], $dato['MSid'], $dato['MSSid'], $dato['url']);
+		$dato['navegacion'] = $this->N_model->get_navegacion();
+		$this->load->view('View_HYM/Configuraciones/Modulo-Prueba/index', $dato);
+	}
+
+	public function Prueba_Modulo()
+	{
+		if (!$this->session->userdata('usuario')) {
+			redirect('/login');
+		}
+
+
+		$this->load->view('View_HYM/Configuraciones/Modulo-Prueba/principal');
+	}
+	
 }

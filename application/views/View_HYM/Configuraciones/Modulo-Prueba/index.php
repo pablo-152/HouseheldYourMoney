@@ -9,12 +9,11 @@ $SoloSubModulo = str_replace('Div', '', $MSid);
     $(document).ready(function() {
         Principal(); // Llama a la función solo cuando este archivo está cargado
         activarMenu("<?php echo $Mid; ?>","<?php echo $MSid; ?>","<?php echo $MSSid; ?>");
-
     });
 
     function Principal() {
         //alert('Función Principal ejecutada');
-        var url = "<?php echo site_url(); ?>" + "/Login/Navegacion_Modulo"; 
+        var url = "<?php echo site_url(); ?>" + "/Login/Prueba_Modulo"; 
         
         $.ajax({
             url: url,

@@ -848,7 +848,7 @@ code {
   transform: rotate(90deg); }
 
 #sidebar ul.menu-categories li.menu:first-child ul.submenu > li a {
-  justify-content: flex-start; }
+  /*justify-content: flex-start;*/ }
   #sidebar ul.menu-categories li.menu:first-child ul.submenu > li a i {
     align-self: center;
     margin-right: 12px;
@@ -883,6 +883,22 @@ code {
   height: 20px;
   stroke-width: 1.6; }
 
+#sidebar ul.menu-categories li.submenu > .dropdown-toggle svg {
+  color: #506690;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.6; }
+
+#sidebar ul.sub-submenu li.sub-submenu > a svg {
+  color: #506690;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.6; }
+
 #sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] {
   background: #fff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -890,7 +906,11 @@ code {
   color: #0e1726; }
   #sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] svg {
     color: #030305;
-    fill: #e0e6ed; }
+    fill: #030305; }
+
+    #sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] .flecha {
+      color: #030305;
+      fill: #ffffff; }
   #sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"]:hover svg, #sidebar ul.menu-categories li.menu > .dropdown-toggle[data-active="true"] span {
     color: #030305; }
 
@@ -950,7 +970,7 @@ code {
   font-weight: 600; }
 
 #sidebar ul.menu-categories ul.submenu > li a.dropdown-toggle {
-  padding: 10px 15px 10px 24px; }
+  padding: 10px 15px 10px 0px; }
 
 #sidebar ul.menu-categories li.menu ul.submenu > li.active a:before {
   background-color: #4361ee; }
