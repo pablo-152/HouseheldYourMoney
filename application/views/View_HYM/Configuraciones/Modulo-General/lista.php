@@ -17,7 +17,7 @@
             <tr>
                 <td><?php echo $list['id_padre_navegacion']; ?></td>
                 <td><?php echo $list['tipo_navegacion']; ?></td>
-                <td>
+                <td class="text-center">
                     <div class="icon-svg">
                         <?= html_entity_decode($list['svg_navegacion']) ?>
                     </div>
@@ -25,8 +25,8 @@
                 <td><?php echo $list['link_navegacion']; ?></td>
                 <td><?php echo $list['titulo_navegacion']; ?></td>
                 <td><?php echo $list['descripcion_navegacion']; ?></td>
-                <td><?php echo $list['id_nivel_navegacion']; ?></td>
-                <td><?php echo $list['estado']; ?></td>
+                <td class="text-center"><?php echo $list['id_nivel_navegacion']; ?></td>
+                <td class="text-center"><?php echo $list['estado']; ?></td>
                 <td class="text-center">
                     <ul class="table-controls">
                         <li>
